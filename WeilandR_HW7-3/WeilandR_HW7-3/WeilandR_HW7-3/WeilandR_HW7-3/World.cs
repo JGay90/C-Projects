@@ -16,9 +16,21 @@ namespace WeilandR_HW7_3
         {
             Room room1 = new Room();
             room1.rName = "Entrance";
+            Creature Goblin = new Creature();
+            room1.mobList.Add(Goblin);
+            room1.mobList[0].Name = "Goblin";
+            Item Shield = new Item();
+            room1.itemList.Add(Shield);
+            room1.itemList[0].Name = "Shield";
             worldList.Add(room1);
             Room room2 = new Room();
             room2.rName = "Dark Room";
+            Creature Wolf = new Creature();
+            room2.mobList.Add(Wolf);
+            room2.mobList[0].Name = "Wolf";
+            Item Sword = new Item();
+            room2.itemList.Add(Sword);
+            room2.itemList[0].Name = "Sword";
             worldList.Add(room2);
             Room room3 = new Room();
             room3.rName = "Dining Hall";

@@ -57,7 +57,7 @@ namespace WeilandR_HW7_3
             goblin.AC = int.Parse(stats.Dequeue());
             goblin.ATK = int.Parse(stats.Dequeue());
             goblin.DMG = int.Parse(stats.Dequeue());
-           //goblin.i = Image.FromFile("goblin.png");
+            //goblin.i = Image.FromFile("goblin.png");
 
             Creature wolf = new Creature();
             wolf.Name = stats.Dequeue();
@@ -72,21 +72,55 @@ namespace WeilandR_HW7_3
         }
         private void attackMobButton_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void forwardButton_Click(object sender, EventArgs e)
         {
-            i++;
-            roomNameLabel.Text = world.worldList[i].rName;
+            if (i == 9)
+            {
+                MessageBox.Show("You are at the end of the " +
+                    "dungeon. You can go no further.");
+            }
+            else
+            {
+                i++;
+                roomNameLabel.Text = world.worldList[i].rName;
+                mobPopulation();
+            }
 
         }
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            i--;
-            roomNameLabel.Text = world.worldList[i].rName;
-
+            if (i == 0)
+            {
+                MessageBox.Show("You are at the beginning of the " +
+                    "dungeon. You can go no further.");
+            }
+            else
+            {
+                i--;
+                roomNameLabel.Text = world.worldList[i].rName;
+                mobPopulation();
+                itemPopulation();
+            }
+        }
+        private void mobPopulation()
+        {
+            mobListBox.Items.Clear();
+            foreach (Creature val in world.worldList[i].mobList)
+            {
+                mobListBox.Items.Add(val.Name);
+            }
+        }
+        private void itemPopulation()
+        {
+            roomItemListBox.Items.Clear();
+            foreach (Item val in world.worldList[i].itemList)
+            {
+                roomItemListBox.Items.Add(val.Name);
+            }
         }
     }
 }

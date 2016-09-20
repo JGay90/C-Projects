@@ -23,14 +23,7 @@ namespace WeilandR_HW7_3
             RID = roomID;
             rName = "Bob";
             rDesc = "Instantiate me properly!";
-            Creature Goblin = new Creature();
-            mobList.Add(Goblin);
-
-
-
         }
-
-
 
     }
 }

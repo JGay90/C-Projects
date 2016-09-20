@@ -57,8 +57,10 @@ namespace WeilandR_HW7_3
             room10.rName = "Dragon Nest";
             worldList.Add(room10);
         }
+        public void RemoveMonster()
+        {
 
-
+        }
 
 
     }

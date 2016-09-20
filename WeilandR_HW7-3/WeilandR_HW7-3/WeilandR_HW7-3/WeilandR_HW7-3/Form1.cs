@@ -31,15 +31,12 @@ namespace WeilandR_HW7_3
             enemyDefenseLabel.Text = world.worldList[0].mobList[0].AC.ToString();
             enemyHPLabel.Text = world.worldList[0].mobList[0].HP.ToString();
             enemyLevelLabel.Text = world.worldList[0].mobList[0].Lvl.ToString();
-
-
-
-
+            mobPopulation();
+            itemPopulation();
         }
 
         private void Mobload()
         {
-            int placeholder = -1; //This is here because the computer gave me a stupid amount of trouble. Explain in class. -Jeff
             Queue<string> stats = new Queue<string>();
             StreamReader input = File.OpenText("Bestiary.txt");
 

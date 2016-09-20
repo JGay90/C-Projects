@@ -302,7 +302,8 @@
             this.enemyLevelLabel.Name = "enemyLevelLabel";
             this.enemyLevelLabel.Size = new System.Drawing.Size(119, 23);
             this.enemyLevelLabel.TabIndex = 1;
-            this.enemyLevelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.enemyLevelLabel.Text = "0";
+            this.enemyLevelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label14
             // 
@@ -320,7 +321,8 @@
             this.enemyDefenseLabel.Name = "enemyDefenseLabel";
             this.enemyDefenseLabel.Size = new System.Drawing.Size(119, 23);
             this.enemyDefenseLabel.TabIndex = 1;
-            this.enemyDefenseLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.enemyDefenseLabel.Text = "0";
+            this.enemyDefenseLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label12
             // 
@@ -338,7 +340,8 @@
             this.enemyAttackLabel.Name = "enemyAttackLabel";
             this.enemyAttackLabel.Size = new System.Drawing.Size(119, 23);
             this.enemyAttackLabel.TabIndex = 1;
-            this.enemyAttackLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.enemyAttackLabel.Text = "0";
+            this.enemyAttackLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label13
             // 
@@ -356,7 +359,8 @@
             this.enemyHPLabel.Name = "enemyHPLabel";
             this.enemyHPLabel.Size = new System.Drawing.Size(119, 23);
             this.enemyHPLabel.TabIndex = 1;
-            this.enemyHPLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.enemyHPLabel.Text = "0";
+            this.enemyHPLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox4
             // 
@@ -384,7 +388,7 @@
             this.playerExpLabel.Name = "playerExpLabel";
             this.playerExpLabel.Size = new System.Drawing.Size(119, 23);
             this.playerExpLabel.TabIndex = 1;
-            this.playerExpLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.playerExpLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // playerLevelLabel
             // 
@@ -393,7 +397,7 @@
             this.playerLevelLabel.Name = "playerLevelLabel";
             this.playerLevelLabel.Size = new System.Drawing.Size(119, 23);
             this.playerLevelLabel.TabIndex = 1;
-            this.playerLevelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.playerLevelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // playerDefenseLabel
             // 
@@ -402,7 +406,7 @@
             this.playerDefenseLabel.Name = "playerDefenseLabel";
             this.playerDefenseLabel.Size = new System.Drawing.Size(119, 23);
             this.playerDefenseLabel.TabIndex = 1;
-            this.playerDefenseLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.playerDefenseLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // playerAttackLabel
             // 
@@ -411,7 +415,7 @@
             this.playerAttackLabel.Name = "playerAttackLabel";
             this.playerAttackLabel.Size = new System.Drawing.Size(119, 23);
             this.playerAttackLabel.TabIndex = 1;
-            this.playerAttackLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.playerAttackLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // playerHPLabel
             // 
@@ -420,7 +424,7 @@
             this.playerHPLabel.Name = "playerHPLabel";
             this.playerHPLabel.Size = new System.Drawing.Size(119, 23);
             this.playerHPLabel.TabIndex = 1;
-            this.playerHPLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.playerHPLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label10
             // 

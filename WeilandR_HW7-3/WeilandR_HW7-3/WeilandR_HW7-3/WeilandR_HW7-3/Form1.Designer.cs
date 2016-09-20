@@ -68,6 +68,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.displayTextBox = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -102,16 +103,16 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.roomItemListBox);
             this.groupBox1.Controls.Add(this.mobListBox);
-            this.groupBox1.Location = new System.Drawing.Point(15, 33);
+            this.groupBox1.Location = new System.Drawing.Point(15, 177);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(383, 292);
+            this.groupBox1.Size = new System.Drawing.Size(383, 148);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Room";
             // 
             // useRoomItemButton
             // 
-            this.useRoomItemButton.Location = new System.Drawing.Point(285, 261);
+            this.useRoomItemButton.Location = new System.Drawing.Point(286, 118);
             this.useRoomItemButton.Name = "useRoomItemButton";
             this.useRoomItemButton.Size = new System.Drawing.Size(75, 23);
             this.useRoomItemButton.TabIndex = 2;
@@ -120,7 +121,7 @@
             // 
             // pickUpRoomItemButton
             // 
-            this.pickUpRoomItemButton.Location = new System.Drawing.Point(204, 261);
+            this.pickUpRoomItemButton.Location = new System.Drawing.Point(205, 118);
             this.pickUpRoomItemButton.Name = "pickUpRoomItemButton";
             this.pickUpRoomItemButton.Size = new System.Drawing.Size(75, 23);
             this.pickUpRoomItemButton.TabIndex = 2;
@@ -129,7 +130,7 @@
             // 
             // attackMobButton
             // 
-            this.attackMobButton.Location = new System.Drawing.Point(59, 261);
+            this.attackMobButton.Location = new System.Drawing.Point(67, 118);
             this.attackMobButton.Name = "attackMobButton";
             this.attackMobButton.Size = new System.Drawing.Size(75, 23);
             this.attackMobButton.TabIndex = 2;
@@ -160,7 +161,7 @@
             this.roomItemListBox.FormattingEnabled = true;
             this.roomItemListBox.Location = new System.Drawing.Point(192, 30);
             this.roomItemListBox.Name = "roomItemListBox";
-            this.roomItemListBox.Size = new System.Drawing.Size(180, 225);
+            this.roomItemListBox.Size = new System.Drawing.Size(180, 82);
             this.roomItemListBox.TabIndex = 0;
             // 
             // mobListBox
@@ -168,7 +169,7 @@
             this.mobListBox.FormattingEnabled = true;
             this.mobListBox.Location = new System.Drawing.Point(6, 30);
             this.mobListBox.Name = "mobListBox";
-            this.mobListBox.Size = new System.Drawing.Size(180, 225);
+            this.mobListBox.Size = new System.Drawing.Size(180, 82);
             this.mobListBox.TabIndex = 0;
             // 
             // label4
@@ -205,16 +206,16 @@
             this.groupBox2.Controls.Add(this.usePlayerItemButton);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.playerItemListBox);
-            this.groupBox2.Location = new System.Drawing.Point(404, 33);
+            this.groupBox2.Location = new System.Drawing.Point(404, 177);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(192, 292);
+            this.groupBox2.Size = new System.Drawing.Size(192, 148);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Player";
             // 
             // usePlayerItemButton
             // 
-            this.usePlayerItemButton.Location = new System.Drawing.Point(58, 261);
+            this.usePlayerItemButton.Location = new System.Drawing.Point(60, 118);
             this.usePlayerItemButton.Name = "usePlayerItemButton";
             this.usePlayerItemButton.Size = new System.Drawing.Size(75, 23);
             this.usePlayerItemButton.TabIndex = 2;
@@ -235,7 +236,7 @@
             this.playerItemListBox.FormattingEnabled = true;
             this.playerItemListBox.Location = new System.Drawing.Point(6, 30);
             this.playerItemListBox.Name = "playerItemListBox";
-            this.playerItemListBox.Size = new System.Drawing.Size(180, 225);
+            this.playerItemListBox.Size = new System.Drawing.Size(180, 82);
             this.playerItemListBox.TabIndex = 0;
             // 
             // groupBox3
@@ -471,11 +472,22 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "HP:";
             // 
+            // displayTextBox
+            // 
+            this.displayTextBox.Location = new System.Drawing.Point(30, 44);
+            this.displayTextBox.MaxLength = 300;
+            this.displayTextBox.Name = "displayTextBox";
+            this.displayTextBox.ReadOnly = true;
+            this.displayTextBox.Size = new System.Drawing.Size(560, 115);
+            this.displayTextBox.TabIndex = 6;
+            this.displayTextBox.Text = "";
+            // 
             // dungeonCrawlForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(612, 506);
+            this.Controls.Add(this.displayTextBox);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.forwardButton);
@@ -542,6 +554,7 @@
         private System.Windows.Forms.Label playerDefenseLabel;
         private System.Windows.Forms.Label playerAttackLabel;
         private System.Windows.Forms.Label playerHPLabel;
+        private System.Windows.Forms.RichTextBox displayTextBox;
     }
 }
 

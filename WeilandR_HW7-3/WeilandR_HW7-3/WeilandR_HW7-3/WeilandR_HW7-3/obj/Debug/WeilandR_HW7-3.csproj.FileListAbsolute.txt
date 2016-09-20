@@ -1,0 +1,20 @@
+C:\Users\Public\Documents\visual studio 2015\Projects\WeilandR_HW7-3\WeilandR_HW7-3\bin\Debug\WeilandR_HW7-3.exe.config
+E:\CSC 253\Ch7\WeilandR_HW7-3\WeilandR_HW7-3\bin\Debug\WeilandR_HW7-3.exe.config
+C:\Users\nelsonj5726\Desktop\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\bin\Debug\WeilandR_HW7-3.exe.config
+C:\Users\nelsonj5726\Desktop\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7-3.csprojResolveAssemblyReference.cache
+C:\Users\nelsonj5726\Desktop\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7_3.Properties.Resources.resources
+C:\Users\nelsonj5726\Desktop\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7-3.csproj.GenerateResource.Cache
+C:\Users\nelsonj5726\Desktop\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\bin\Debug\WeilandR_HW7-3.exe
+C:\Users\nelsonj5726\Desktop\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\bin\Debug\WeilandR_HW7-3.pdb
+C:\Users\nelsonj5726\Desktop\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7-3.exe
+C:\Users\nelsonj5726\Desktop\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7-3.pdb
+C:\Users\nelsonj5726\Desktop\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7_3.dungeonCrawlForm.resources
+C:\Users\Rey\Downloads\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\bin\Debug\WeilandR_HW7-3.exe.config
+C:\Users\Rey\Downloads\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7-3.exe
+C:\Users\Rey\Downloads\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7-3.pdb
+C:\Users\Rey\Downloads\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\bin\Debug\WeilandR_HW7-3.exe
+C:\Users\Rey\Downloads\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\bin\Debug\WeilandR_HW7-3.pdb
+C:\Users\Rey\Downloads\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7-3.csprojResolveAssemblyReference.cache
+C:\Users\Rey\Downloads\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7_3.dungeonCrawlForm.resources
+C:\Users\Rey\Downloads\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7_3.Properties.Resources.resources
+C:\Users\Rey\Downloads\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7-3.csproj.GenerateResource.Cache

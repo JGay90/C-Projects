@@ -122,5 +122,10 @@ namespace WeilandR_HW7_3
                 roomItemListBox.Items.Add(val.Name);
             }
         }
+
+        private void attackCombatButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

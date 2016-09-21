@@ -81,7 +81,7 @@ namespace WeilandR_HW7_3
                }
                else
                {
-                   displayTextBox.AppendText("Please select a monster to attack");
+                   displayTextBox.AppendText("\nPlease select a monster to attack");
                    displayTextBox.ScrollToCaret();
                }
 
@@ -90,12 +90,19 @@ namespace WeilandR_HW7_3
             {
                 damage = player.weaponAttack();
                 placeHolder.HP = placeHolder.HP - damage;
-                world.worldList[i].checkDeaths();
-                displayTextBox.AppendText("You deal " + damage + " damage to the " + placeHolder.Name);
+                displayTextBox.AppendText("\nYou deal " + damage + " damage to the " + placeHolder.Name);
+                if (placeHolder.HP <= 0)
+                {
+                    mobListBox.Items.Remove(mobListBox.SelectedItem);
+                    world.worldList[i].checkDeaths();
+                    displayTextBox.AppendText("\nYou have slain the " + placeHolder.Name);
+                }
+               
             }
             else
             {
                 MessageBox.Show("Please select a real monster to attack");
+               
             }
 
         }

@@ -34,9 +34,12 @@ namespace WeilandR_HW7_3
                 {
                     val.isdead = true;
                 }
-                if (val.isdead == true)
+            }
+            for(int i = 0; i < mobList.Count; i++)
+            {
+                if (mobList[i].isdead == true)
                 {
-                    mobList.Remove(val);
+                    mobList.RemoveAt(i);
                 }
             }
         }

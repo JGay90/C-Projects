@@ -16,6 +16,7 @@ namespace WeilandR_HW7_3
         public int EXP { get; set; }
         public Weapon Weapon { get; set; }
         public Armor Armor { get; set; }
+        public int Location { get; set; }
 
         List<Item> playerItems = new List<Item>();
 
@@ -25,6 +26,7 @@ namespace WeilandR_HW7_3
             ATK = 1;
             Lvl = 1;
             EXP = 0;
+            Location = 0;
             Weapon = new Weapon();
             Armor = new Armor();
             Weapon.Name = "Wooden Stick";

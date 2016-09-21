@@ -69,6 +69,34 @@ namespace WeilandR_HW7_3
         }
         private void attackMobButton_Click(object sender, EventArgs e)
         {
+            Creature placeHolder = null;
+            int damage = 0;
+            bool isdead = false;
+         
+           foreach (Creature val in world.worldList[i].mobList)
+           {
+               if (val.Name == mobListBox.SelectedItem.ToString())
+               {
+                   placeHolder = val;
+               }
+               else
+               {
+                   displayTextBox.AppendText("Please select a monster to attack");
+                   displayTextBox.ScrollToCaret();
+               }
+
+            }
+           if(placeHolder != null)
+            {
+                damage = player.weaponAttack();
+                placeHolder.HP = placeHolder.HP - damage;
+                world.worldList[i].checkDeaths();
+                displayTextBox.AppendText("You deal " + damage + "damage to the " + placeHolder.Name);
+            }
+            else
+            {
+                MessageBox.Show("Please select a real monster to attack");
+            }
 
         }
 
@@ -84,6 +112,7 @@ namespace WeilandR_HW7_3
                 i++;
                 roomNameLabel.Text = world.worldList[i].rName;
                 mobPopulation();
+                player.Location++;
             }
 
         }
@@ -101,6 +130,7 @@ namespace WeilandR_HW7_3
                 roomNameLabel.Text = world.worldList[i].rName;
                 mobPopulation();
                 itemPopulation();
+                player.Location--;
             }
         }
         private void mobPopulation()

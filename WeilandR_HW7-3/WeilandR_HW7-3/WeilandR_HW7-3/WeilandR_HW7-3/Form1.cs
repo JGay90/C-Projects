@@ -71,9 +71,8 @@ namespace WeilandR_HW7_3
         {
             Creature placeHolder = null;
             int damage = 0;
-            bool isdead = false;
          
-           foreach (Creature val in world.worldList[i].mobList)
+           foreach (Creature val in world.worldList[i].mobList)//for each creature in the list, check to see if the selected name matches the creature's.
            {
                if (val.Name == mobListBox.SelectedItem.ToString())
                {
@@ -84,9 +83,8 @@ namespace WeilandR_HW7_3
                    displayTextBox.AppendText("\nPlease select a monster to attack");
                    displayTextBox.ScrollToCaret();
                }
-
             }
-           if(placeHolder != null)
+           if(placeHolder != null)//If the placeholder has a creature, do this.
             {
                 damage = player.weaponAttack();
                 placeHolder.HP = placeHolder.HP - damage;
@@ -97,14 +95,12 @@ namespace WeilandR_HW7_3
                     world.worldList[i].checkDeaths();
                     displayTextBox.AppendText("\nYou have slain the " + placeHolder.Name);
                 }
-               
             }
             else
             {
-                MessageBox.Show("Please select a real monster to attack");
+                displayTextBox.AppendText("\nPlease select a real monster to attack");
                
             }
-
         }
 
         private void forwardButton_Click(object sender, EventArgs e)

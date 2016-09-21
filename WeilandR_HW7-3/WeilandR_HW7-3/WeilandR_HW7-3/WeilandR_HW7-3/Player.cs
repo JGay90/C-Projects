@@ -14,19 +14,39 @@ namespace WeilandR_HW7_3
         public int DMG { get; set; }
         public int Lvl { get; set; }
         public int EXP { get; set; }
+        public Weapon Weapon { get; set; }
+        public Armor Armor { get; set; }
 
         List<Item> playerItems = new List<Item>();
 
         public Player()
         {
             HP = 10;
-            AC = 0;
             ATK = 1;
             Lvl = 1;
-            DMG = ATK + Lvl;
             EXP = 0;
+            Weapon = new Weapon();
+            Armor = new Armor();
+            Weapon.Name = "Wooden Stick";
+            Weapon.attackValue = 1;
+            Armor.Name = "Tattered Shirt";
+            DMG = ATK + Weapon.attackValue;
+            AC = Armor.armorValue;
         }
 
+        public int weaponAttack()
+        {
+            int result = 0;
+
+            /* Instantiate a new dice roller here.
+             * Roll the dice. Add DMG to the result of the roll.
+             */
+
+
+
+            return result;
+
+        }
 
     }
 }

@@ -33,7 +33,7 @@ namespace WeilandR_HW7_3
         {
             Name = "You didn't populate the bestiary";
             Desc = "You should go do that now.";
-            HP = 0;
+            HP = 10;
             AC = 0;
             ATK = 0;
             Lvl = 1;

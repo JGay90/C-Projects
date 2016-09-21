@@ -46,7 +46,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.playerItemListBox = new System.Windows.Forms.ListBox();
             this.combatGroupbox = new System.Windows.Forms.GroupBox();
-            this.attackCombatButton = new System.Windows.Forms.Button();
             this.enemyGroupbox = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.enemyLevelLabel = new System.Windows.Forms.Label();
@@ -242,7 +241,6 @@
             // 
             // combatGroupbox
             // 
-            this.combatGroupbox.Controls.Add(this.attackCombatButton);
             this.combatGroupbox.Controls.Add(this.enemyGroupbox);
             this.combatGroupbox.Controls.Add(this.playerGroupbox);
             this.combatGroupbox.Location = new System.Drawing.Point(15, 331);
@@ -251,15 +249,6 @@
             this.combatGroupbox.TabIndex = 5;
             this.combatGroupbox.TabStop = false;
             this.combatGroupbox.Text = "Combat";
-            // 
-            // attackCombatButton
-            // 
-            this.attackCombatButton.Location = new System.Drawing.Point(210, 25);
-            this.attackCombatButton.Name = "attackCombatButton";
-            this.attackCombatButton.Size = new System.Drawing.Size(161, 138);
-            this.attackCombatButton.TabIndex = 1;
-            this.attackCombatButton.Text = "Attack";
-            this.attackCombatButton.UseVisualStyleBackColor = true;
             // 
             // enemyGroupbox
             // 
@@ -535,7 +524,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListBox playerItemListBox;
         private System.Windows.Forms.GroupBox combatGroupbox;
-        private System.Windows.Forms.Button attackCombatButton;
         private System.Windows.Forms.GroupBox enemyGroupbox;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label14;

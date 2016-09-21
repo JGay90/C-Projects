@@ -11,6 +11,6 @@ namespace WeilandR_HW7_3
         public void PlayerAtk(Player player, Creature monster)
         {
                 
-    }
+        }
     }
 }

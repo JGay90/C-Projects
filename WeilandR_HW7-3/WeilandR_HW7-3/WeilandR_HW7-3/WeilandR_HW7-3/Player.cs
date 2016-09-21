@@ -38,11 +38,9 @@ namespace WeilandR_HW7_3
         {
             int result = 0;
 
-            /* Instantiate a new dice roller here.
-             * Roll the dice. Add DMG to the result of the roll.
-             */
+            RandomDice rand = new RandomDice();
 
-
+            result = rand.rollDice(10) + DMG;
 
             return result;
 

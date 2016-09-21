@@ -91,7 +91,7 @@ namespace WeilandR_HW7_3
                 damage = player.weaponAttack();
                 placeHolder.HP = placeHolder.HP - damage;
                 world.worldList[i].checkDeaths();
-                displayTextBox.AppendText("You deal " + damage + "damage to the " + placeHolder.Name);
+                displayTextBox.AppendText("You deal " + damage + " damage to the " + placeHolder.Name);
             }
             else
             {

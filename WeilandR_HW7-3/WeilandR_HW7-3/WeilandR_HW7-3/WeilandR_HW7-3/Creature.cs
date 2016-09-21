@@ -18,6 +18,7 @@ namespace WeilandR_HW7_3
         public int Lvl { get; set; }
         public int Exp { get; set; }
         public bool isdead { get; set; }
+        public int rollDamnge { get; set; }
         //public Image i { get; set; }
 
         /**
@@ -40,6 +41,7 @@ namespace WeilandR_HW7_3
             DMG = ATK+Lvl;
             Exp = 10;
             isdead = false;
+            rollDamnge =
             //i = Image.FromFile("Bestiary.png");
         }
     }

@@ -18,11 +18,27 @@ namespace WeilandR_HW7_3
         public List<Item> itemList = new List<Item>();
 
         private int roomID = 0;
+
         public Room()
         {
             RID = roomID;
             rName = "Bob";
             rDesc = "Instantiate me properly!";
+        }
+
+        public void checkDeaths()
+        {
+            foreach(Creature val in mobList)
+            {
+                if(val.HP <= 0)
+                {
+                    val.isdead = true;
+                }
+                if (val.isdead == true)
+                {
+                    mobList.Remove(val);
+                }
+            }
         }
 
     }

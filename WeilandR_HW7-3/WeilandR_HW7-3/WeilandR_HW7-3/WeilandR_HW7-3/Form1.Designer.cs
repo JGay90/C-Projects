@@ -124,6 +124,7 @@
             this.useRoomItemButton.TabIndex = 2;
             this.useRoomItemButton.Text = "Use";
             this.useRoomItemButton.UseVisualStyleBackColor = true;
+            this.useRoomItemButton.Click += new System.EventHandler(this.useRoomItemButton_Click);
             // 
             // pickUpItemButton
             // 
@@ -228,6 +229,7 @@
             this.usePlayerItemButton.TabIndex = 2;
             this.usePlayerItemButton.Text = "Use";
             this.usePlayerItemButton.UseVisualStyleBackColor = true;
+            this.usePlayerItemButton.Click += new System.EventHandler(this.usePlayerItemButton_Click);
             // 
             // label5
             // 

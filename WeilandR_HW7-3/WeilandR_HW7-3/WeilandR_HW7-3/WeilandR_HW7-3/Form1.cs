@@ -37,38 +37,6 @@ namespace WeilandR_HW7_3
             itemPopulation();
         }
 
-        private void Mobload()
-        {
-            Queue<string> stats = new Queue<string>();
-            StreamReader input = File.OpenText("Bestiary.txt");
-
-            //Super simple method of putting a bunch of stats in. This would suck for more complex things.
-            while (!input.EndOfStream)
-            {
-                stats.Enqueue(input.ReadLine());
-            }
-
-            //Super simple method of giving a creature stats. This would suck for more complex things.
-            Creature goblin = new Creature();
-            goblin.Name = stats.Dequeue();
-            goblin.Desc = stats.Dequeue();
-            goblin.HP = int.Parse(stats.Dequeue());
-            goblin.AC = int.Parse(stats.Dequeue());
-            goblin.ATK = int.Parse(stats.Dequeue());
-            goblin.DMG = int.Parse(stats.Dequeue());
-            //goblin.i = Image.FromFile("goblin.png");
-
-            Creature wolf = new Creature();
-            wolf.Name = stats.Dequeue();
-            wolf.Desc = stats.Dequeue();
-            wolf.HP = int.Parse(stats.Dequeue());
-            wolf.AC = int.Parse(stats.Dequeue());
-            wolf.ATK = int.Parse(stats.Dequeue());
-            wolf.DMG = int.Parse(stats.Dequeue());
-            //wolf.i = Image.FromFile("wolf.png");
-
-
-        }
         private void attackMobButton_Click(object sender, EventArgs e)
         {
             Creature placeHolder = null;
@@ -91,10 +59,16 @@ namespace WeilandR_HW7_3
                 damage = player.weaponAttack();
                 placeHolder.HP = placeHolder.HP - damage;
                 displayTextBox.AppendText("\nYou deal " + damage + " damage to the " + placeHolder.Name);
+               
+                enemyHPLabel.Text = world.worldList[i].mobList[mobListBox.SelectedIndex].HP.ToString();
+                
                 if (placeHolder.HP <= 0)
                 {
                     mobListBox.Items.Remove(mobListBox.SelectedItem);
                     world.worldList[i].checkDeaths();
+                    enemyLevelLabel.Text = world.worldList[i].mobList[mobListBox.SelectedIndex].Lvl.ToString();
+                    enemyAttackLabel.Text = world.worldList[i].mobList[mobListBox.SelectedIndex].ATK.ToString();
+                    enemyDefenseLabel.Text = world.worldList[i].mobList[mobListBox.SelectedIndex].AC.ToString();
                     displayTextBox.AppendText("\nYou have slain the " + placeHolder.Name);
                 }
             }
@@ -177,12 +151,25 @@ namespace WeilandR_HW7_3
                 roomItemListBox.Items.Remove(roomItemListBox.SelectedItem);
                 displayTextBox.AppendText("\nYou pick up the " + placeHolder.Name);
                 player.Inventory.Add(placeHolder);
+                playerItemListBox.Items.Add(placeHolder.Name);
             }
             else
             {
                 displayTextBox.AppendText("\nPlease select a real item to pick up.");
 
             }
+        }
+
+        private void useRoomItemButton_Click(object sender, EventArgs e)
+        {
+            //this button need to be worked on.
+            displayTextBox.AppendText("\nThis item is not complete yet.");
+        }
+
+        private void usePlayerItemButton_Click(object sender, EventArgs e)
+        {
+            //this button need to be worked on.
+            displayTextBox.AppendText("\nThis item is not complete yet.");
         }
     }
 }

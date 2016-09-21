@@ -133,6 +133,7 @@
             this.pickUpItemButton.TabIndex = 2;
             this.pickUpItemButton.Text = "Pick Up";
             this.pickUpItemButton.UseVisualStyleBackColor = true;
+            this.pickUpItemButton.Click += new System.EventHandler(this.pickUpItemButton_Click);
             // 
             // attackMobButton
             // 
@@ -239,6 +240,7 @@
             // 
             // playerItemListBox
             // 
+            this.playerItemListBox.DisplayMember = "Item.Name";
             this.playerItemListBox.FormattingEnabled = true;
             this.playerItemListBox.Location = new System.Drawing.Point(6, 30);
             this.playerItemListBox.Name = "playerItemListBox";

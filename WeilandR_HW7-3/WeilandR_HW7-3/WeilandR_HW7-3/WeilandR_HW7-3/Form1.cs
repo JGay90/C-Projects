@@ -31,6 +31,8 @@ namespace WeilandR_HW7_3
             enemyDefenseLabel.Text = world.worldList[0].mobList[0].AC.ToString();
             enemyHPLabel.Text = world.worldList[0].mobList[0].HP.ToString();
             enemyLevelLabel.Text = world.worldList[0].mobList[0].Lvl.ToString();
+            playerWeaponLabel.Text = player.Weapon.Name;
+            playerArmorLabel.Text = player.Armor.Name;
             mobPopulation();
             itemPopulation();
         }
@@ -150,6 +152,36 @@ namespace WeilandR_HW7_3
             foreach (Item val in world.worldList[i].itemList)
             {
                 roomItemListBox.Items.Add(val.Name);
+            }
+        }
+
+        private void pickUpItemButton_Click(object sender, EventArgs e)
+        {
+            Item placeHolder = null;
+
+            foreach (Item val in world.worldList[i].itemList)//for each item in the list, check to see if the selected name matches the item's.
+            {
+                if (val.Name == roomItemListBox.SelectedItem.ToString())
+                {
+                    placeHolder = val;
+                }
+                else
+                {
+                    displayTextBox.AppendText("\nPlease select an item to pick up.");
+                    displayTextBox.ScrollToCaret();
+                }
+            }
+            if (placeHolder != null)//If the placeholder has an item, do this.
+            {
+                world.worldList[i].itemList.Remove(placeHolder);
+                roomItemListBox.Items.Remove(roomItemListBox.SelectedItem);
+                displayTextBox.AppendText("\nYou pick up the " + placeHolder.Name);
+                player.Inventory.Add(placeHolder);
+            }
+            else
+            {
+                displayTextBox.AppendText("\nPlease select a real item to pick up.");
+
             }
         }
     }

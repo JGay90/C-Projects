@@ -77,7 +77,7 @@ namespace WeilandR_HW7_3
             
             //Room 5 stuff
             room5.rName = "Armory";
-            dagger.Name = "Longsword";
+            dagger.Name = "Dagger";
             room5.itemList.Add(dagger);
             worldList.Add(room5);
 

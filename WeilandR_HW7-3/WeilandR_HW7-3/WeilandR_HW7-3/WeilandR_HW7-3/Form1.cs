@@ -52,7 +52,6 @@ namespace WeilandR_HW7_3
                     else
                     {
                         displayTextBox.AppendText("\nPlease select a monster to attack");
-                        displayTextBox.ScrollToCaret();
                     }
                 }
                 if (placeHolder != null)//If the placeholder has a creature, do this.
@@ -80,6 +79,7 @@ namespace WeilandR_HW7_3
             {
                 displayTextBox.AppendText("\nAttack what?");
             }
+            displayTextBox.ScrollToCaret();
         }
 
         private void forwardButton_Click(object sender, EventArgs e)
@@ -165,6 +165,7 @@ namespace WeilandR_HW7_3
 
         private void useRoomItemButton_Click(object sender, EventArgs e)
         {
+
             Item placeHolder = null;
 
             if (roomItemListBox.SelectedIndex != -1)

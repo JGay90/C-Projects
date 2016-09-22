@@ -14,64 +14,90 @@ namespace WeilandR_HW7_3
 
         public World()
         {
+            //this is the base room in our world.
             Room room1 = new Room();
-            room1.rName = "Entrance";
-            Creature Goblin = new Creature();
-            room1.mobList.Add(Goblin);
-            room1.mobList[0].Name = "Goblin";
-            Creature Skeleton = new Creature();
-            room1.mobList.Add(Skeleton);
-            room1.mobList[1].Name = "Skeleton";
-            Item HealingPotion = new Item();
-            room1.itemList.Add(HealingPotion);
-            room1.itemList[0].Name = "Potion of Healing";
-            room1.itemList[0].Effect = "Heal1";
-            worldList.Add(room1);
             Room room2 = new Room();
-            room2.rName = "Dark Room";
-            Creature Wolf = new Creature();
-            room2.mobList.Add(Wolf);
-            room2.mobList[0].Name = "Wolf";
-            Item DefensePotion = new Item();
-            room2.itemList.Add(DefensePotion);
-            room2.itemList[0].Name = "Iron Skin Potion";
-            room2.itemList[0].Effect = "Def1";
-            Item Sword = new Item();
-            room2.itemList.Add(Sword);
-            room2.itemList[1].Name = "Sword";
-            worldList.Add(room2);
             Room room3 = new Room();
-            room3.rName = "Dining Hall";
-            Item AttackPotion = new Item();
-            room3.itemList.Add(AttackPotion);
-            room3.itemList[0].Name = "Strength Potion";
-            room3.itemList[0].Effect = "Atk1";
-            worldList.Add(room3);
             Room room4 = new Room();
-            room4.rName = "Long Hallway";
-            Item Staff = new Item();
-            room4.itemList.Add(Staff);
-            room4.itemList[0].Name = "Staff";
-            worldList.Add(room4);
             Room room5 = new Room();
-            room5.rName = "Armory";
-            Item Longsword = new Item();
-            room2.itemList.Add(Longsword);
-            room2.itemList[0].Name = "Longsword";
-            worldList.Add(room5);
             Room room6 = new Room();
+            Room room7 = new Room();
+            Room room8 = new Room();
+            Room room9 = new Room();
+            Room room10 = new Room();
+
+
+            //This is the base creature in our world.
+            Creature goblin = new Creature();
+            Creature skeleton = new Creature();
+            Creature wolf = new Creature();
+
+            //These are all the base items in our world.
+            Item defpotion = new Item();
+            Item atkpotion = new Item();
+            Item healpotion = new Item();
+            Weapon sword = new Weapon();
+            Weapon dagger = new Weapon();
+            Weapon staff = new Weapon();
+
+            //Room 1 stuff
+            room1.rName = "Entrance";
+            goblin.Name = "Goblin";
+            room1.mobList.Add(goblin);
+            skeleton.Name = "Skeleton";
+            room1.mobList.Add(skeleton);
+            healpotion.Name = "Potion of Healing";
+            healpotion.Effect = "Heal1";
+            room1.itemList.Add(healpotion);
+            worldList.Add(room1);
+
+            //Room 2 stuff
+            room2.rName = "Dark Room";
+            wolf.Name = "Wolf";
+            room2.mobList.Add(wolf);
+            defpotion.Name = "Iron Skin Potion";
+            defpotion.Effect = "Def1";
+            room2.itemList.Add(defpotion);
+            sword.Name = "Sword";
+            room2.itemList.Add(sword);
+            worldList.Add(room2);
+
+            //Room 3 stuff
+            room3.rName = "Dining Hall";
+            defpotion.Name = "Strength Potion";
+            defpotion.Effect = "Atk1";
+            room3.itemList.Add(atkpotion);
+            worldList.Add(room3);
+
+            //Room 4 stuff
+            room4.rName = "Long Hallway";
+            staff.Name = "Staff";
+            room4.itemList.Add(staff);
+            worldList.Add(room4);
+            
+            //Room 5 stuff
+            room5.rName = "Armory";
+            dagger.Name = "Longsword";
+            room5.itemList.Add(dagger);
+            worldList.Add(room5);
+
+            //Room 6 stuff
             room6.rName = "Tallest Tower";
             worldList.Add(room6);
-            Room room7 = new Room();
+
+            //Room 7 stuff
             room7.rName = "Dungeon";
             worldList.Add(room7);
-            Room room8 = new Room();
+
+            //Room 8 stuff
             room8.rName = "Large Holding Cell";
             worldList.Add(room8);
-            Room room9 = new Room();
+
+            //Room 9 stuff
             room9.rName = "Secret Cave";
             worldList.Add(room9);
-            Room room10 = new Room();
+
+            //Room 10 stuff
             room10.rName = "Dragon Nest";
             worldList.Add(room10);
         }

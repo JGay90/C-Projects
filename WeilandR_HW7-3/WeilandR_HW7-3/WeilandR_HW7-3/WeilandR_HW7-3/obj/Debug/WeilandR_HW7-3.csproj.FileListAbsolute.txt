@@ -57,3 +57,6 @@ C:\Users\weilandr0843\Source\Repos\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\Weil
 C:\Users\weilandr0843\Source\Repos\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7_3.dungeonCrawlForm.resources
 C:\Users\weilandr0843\Source\Repos\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7_3.Properties.Resources.resources
 C:\Users\weilandr0843\Source\Repos\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7-3.csproj.GenerateResource.Cache
+E:\CSC 253\(Class)\Github\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\bin\Debug\WeilandR_HW7-3.exe.config
+E:\CSC 253\(Class)\Github\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7-3.exe
+E:\CSC 253\(Class)\Github\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7-3.pdb

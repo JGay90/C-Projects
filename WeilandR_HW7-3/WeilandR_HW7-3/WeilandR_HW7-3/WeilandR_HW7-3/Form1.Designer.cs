@@ -98,8 +98,9 @@
             this.roomNameLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.roomNameLabel.Location = new System.Drawing.Point(56, 5);
             this.roomNameLabel.Name = "roomNameLabel";
-            this.roomNameLabel.Size = new System.Drawing.Size(85, 21);
+            this.roomNameLabel.Size = new System.Drawing.Size(101, 21);
             this.roomNameLabel.TabIndex = 1;
+            this.roomNameLabel.Text = "Large Holding Cell";
             this.roomNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // roomGroupbox
@@ -185,7 +186,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(147, 9);
+            this.label4.Location = new System.Drawing.Point(180, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 13);
             this.label4.TabIndex = 0;
@@ -193,7 +194,7 @@
             // 
             // backButton
             // 
-            this.backButton.Location = new System.Drawing.Point(206, 4);
+            this.backButton.Location = new System.Drawing.Point(239, 4);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(56, 23);
             this.backButton.TabIndex = 3;
@@ -203,7 +204,7 @@
             // 
             // forwardButton
             // 
-            this.forwardButton.Location = new System.Drawing.Point(268, 4);
+            this.forwardButton.Location = new System.Drawing.Point(301, 4);
             this.forwardButton.Name = "forwardButton";
             this.forwardButton.Size = new System.Drawing.Size(56, 23);
             this.forwardButton.TabIndex = 3;

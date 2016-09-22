@@ -94,6 +94,7 @@ namespace WeilandR_HW7_3
                 i++;
                 roomNameLabel.Text = world.worldList[i].rName;
                 mobPopulation();
+                itemPopulation();
                 player.Location++;
             }
 

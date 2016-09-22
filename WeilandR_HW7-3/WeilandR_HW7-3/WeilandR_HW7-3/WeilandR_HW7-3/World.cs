@@ -64,8 +64,8 @@ namespace WeilandR_HW7_3
 
             //Room 3 stuff
             room3.rName = "Dining Hall";
-            defpotion.Name = "Strength Potion";
-            defpotion.Effect = "Atk1";
+            atkpotion.Name = "Strength Potion";
+            atkpotion.Effect = "Atk1";
             room3.itemList.Add(atkpotion);
             worldList.Add(room3);
 

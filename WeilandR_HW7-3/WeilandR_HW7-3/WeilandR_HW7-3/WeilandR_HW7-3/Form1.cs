@@ -66,9 +66,6 @@ namespace WeilandR_HW7_3
                 {
                     mobListBox.Items.Remove(mobListBox.SelectedItem);
                     world.worldList[i].checkDeaths();
-                    //enemyLevelLabel.Text = world.worldList[i].mobList[mobListBox.SelectedIndex].Lvl.ToString();
-                    //enemyAttackLabel.Text = world.worldList[i].mobList[mobListBox.SelectedIndex].ATK.ToString();
-                    //enemyDefenseLabel.Text = world.worldList[i].mobList[mobListBox.SelectedIndex].AC.ToString();
                     displayTextBox.AppendText("\nYou have slain the " + placeHolder.Name);
                 }
             }
@@ -169,20 +166,40 @@ namespace WeilandR_HW7_3
                 if (val.Name == roomItemListBox.SelectedItem.ToString())
                 {
                     placeHolder = val;
-                }
-                else
-                {
-                    displayTextBox.AppendText("\nThis item is not complete yet.");
+                    placeHolder.durability--;
+                    roomItemListBox.Items.Remove(roomItemListBox.SelectedItem);
                 }
             }
             displayTextBox.AppendText(placeHolder.UseEffect(player));
-            
+            world.worldList[i].itemList.Remove(placeHolder);
         }
 
         private void usePlayerItemButton_Click(object sender, EventArgs e)
         {
-            //this button need to be worked on.
-            displayTextBox.AppendText("\nThis item is not complete yet.");
+            Item placeHolder = null;
+
+            foreach (Item val in player.Inventory)
+            {
+                if (val.Name == playerItemListBox.SelectedItem.ToString())
+                {
+                    placeHolder = val;
+                    placeHolder.durability--;
+                    playerItemListBox.Items.Remove(playerItemListBox.SelectedItem);
+                }
+            }
+            displayTextBox.AppendText(placeHolder.UseEffect(player));
+            player.Inventory.Remove(placeHolder);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            playerHPLabel.Text = player.HP.ToString();
+            playerAttackLabel.Text = player.ATK.ToString();
+            playerDefenseLabel.Text = player.AC.ToString();
+            playerLevelLabel.Text = player.Lvl.ToString();
+            playerExpLabel.Text = player.EXP.ToString();
+            playerWeaponLabel.Text = player.Weapon.Name;
+            playerArmorLabel.Text = player.Armor.Name;
         }
     }
 }

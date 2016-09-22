@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.roomNameLabel = new System.Windows.Forms.Label();
             this.roomGroupbox = new System.Windows.Forms.GroupBox();
@@ -73,6 +74,7 @@
             this.expLabel = new System.Windows.Forms.Label();
             this.displayTextBox = new System.Windows.Forms.RichTextBox();
             this.combatLogGroupbox = new System.Windows.Forms.GroupBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.roomGroupbox.SuspendLayout();
             this.InventoryGroupbox.SuspendLayout();
             this.combatGroupbox.SuspendLayout();
@@ -531,6 +533,12 @@
             this.combatLogGroupbox.TabStop = false;
             this.combatLogGroupbox.Text = "Combat Log";
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 300;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // dungeonCrawlForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -613,6 +621,7 @@
         private System.Windows.Forms.Label playerWeaponLabel;
         private System.Windows.Forms.Label armorLabel;
         private System.Windows.Forms.Label weaponLabel;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

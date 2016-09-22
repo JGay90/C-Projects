@@ -26,21 +26,21 @@ namespace WeilandR_HW7_3
             {
                 case "Heal1":
                     Heal(player);
-                    i = "you recover 5 HP";
+                    i = "\nYou recover 5 HP";
                     break;
 
                 case "Def1":
                     Def(player);
-                    i = "your defense goes up by 2";
+                    i = "\nYour defense goes up by 2";
                     break;
 
                 case "Atk1":
                     Atk(player);
-                    i = "your attack goes up by 2";
+                    i = "\nYour attack goes up by 2";
                     break;
 
                 default:
-                    //Add box/
+                    i = "\nThe item has no effect";
                     break;
             }
             return i;

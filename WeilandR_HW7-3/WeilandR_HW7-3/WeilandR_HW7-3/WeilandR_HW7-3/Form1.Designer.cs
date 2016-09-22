@@ -172,6 +172,7 @@
             this.roomItemListBox.Location = new System.Drawing.Point(192, 30);
             this.roomItemListBox.Name = "roomItemListBox";
             this.roomItemListBox.Size = new System.Drawing.Size(180, 82);
+            this.roomItemListBox.Sorted = true;
             this.roomItemListBox.TabIndex = 0;
             // 
             // mobListBox
@@ -180,6 +181,7 @@
             this.mobListBox.Location = new System.Drawing.Point(6, 30);
             this.mobListBox.Name = "mobListBox";
             this.mobListBox.Size = new System.Drawing.Size(180, 82);
+            this.mobListBox.Sorted = true;
             this.mobListBox.TabIndex = 0;
             // 
             // label4
@@ -249,6 +251,7 @@
             this.playerItemListBox.Location = new System.Drawing.Point(6, 30);
             this.playerItemListBox.Name = "playerItemListBox";
             this.playerItemListBox.Size = new System.Drawing.Size(180, 82);
+            this.playerItemListBox.Sorted = true;
             this.playerItemListBox.TabIndex = 0;
             // 
             // combatGroupbox

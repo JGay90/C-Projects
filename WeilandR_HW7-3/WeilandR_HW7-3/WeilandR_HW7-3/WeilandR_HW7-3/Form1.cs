@@ -167,7 +167,7 @@ namespace WeilandR_HW7_3
         {
             Item placeHolder = null;
 
-            if (mobListBox.SelectedIndex != -1)
+            if (roomItemListBox.SelectedIndex != -1)
             {
                 foreach (Item val in world.worldList[i].itemList)
                 {
@@ -191,7 +191,7 @@ namespace WeilandR_HW7_3
         {
             Item placeHolder = null;
 
-            if (mobListBox.SelectedIndex != -1)
+            if (playerItemListBox.SelectedIndex != -1)
             {
                 foreach (Item val in player.Inventory)
             {

@@ -66,12 +66,3 @@ E:\CSC 253\(Class)\Github\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-
 E:\CSC 253\(Class)\Github\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7_3.dungeonCrawlForm.resources
 E:\CSC 253\(Class)\Github\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7_3.Properties.Resources.resources
 E:\CSC 253\(Class)\Github\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7-3.csproj.GenerateResource.Cache
-C:\Users\umbre\Source\Repos\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\bin\Debug\WeilandR_HW7-3.exe.config
-C:\Users\umbre\Source\Repos\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7-3.exe
-C:\Users\umbre\Source\Repos\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7-3.pdb
-C:\Users\umbre\Source\Repos\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\bin\Debug\WeilandR_HW7-3.exe
-C:\Users\umbre\Source\Repos\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\bin\Debug\WeilandR_HW7-3.pdb
-C:\Users\umbre\Source\Repos\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7-3.csprojResolveAssemblyReference.cache
-C:\Users\umbre\Source\Repos\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7_3.dungeonCrawlForm.resources
-C:\Users\umbre\Source\Repos\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7_3.Properties.Resources.resources
-C:\Users\umbre\Source\Repos\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7-3.csproj.GenerateResource.Cache

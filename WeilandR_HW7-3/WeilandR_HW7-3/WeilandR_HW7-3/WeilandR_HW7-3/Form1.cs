@@ -41,27 +41,27 @@ namespace WeilandR_HW7_3
         {
             Creature placeHolder = null;
             int damage = 0;
-         
-           foreach (Creature val in world.worldList[i].mobList)//for each creature in the list, check to see if the selected name matches the creature's.
-           {
-               if (val.Name == mobListBox.SelectedItem.ToString())
-               {
-                   placeHolder = val;
-               }
-               else
-               {
-                   displayTextBox.AppendText("\nPlease select a monster to attack");
-                   displayTextBox.ScrollToCaret();
-               }
+
+            foreach (Creature val in world.worldList[i].mobList)//for each creature in the list, check to see if the selected name matches the creature's.
+            {
+                if (val.Name == mobListBox.SelectedItem.ToString())
+                {
+                    placeHolder = val;
+                }
+                else
+                {
+                    displayTextBox.AppendText("\nPlease select a monster to attack");
+                    displayTextBox.ScrollToCaret();
+                }
             }
-           if(placeHolder != null)//If the placeholder has a creature, do this.
+            if (placeHolder != null)//If the placeholder has a creature, do this.
             {
                 damage = player.weaponAttack();
                 placeHolder.HP = placeHolder.HP - damage;
                 displayTextBox.AppendText("\nYou deal " + damage + " damage to the " + placeHolder.Name);
-               
+
                 enemyHPLabel.Text = world.worldList[i].mobList[mobListBox.SelectedIndex].HP.ToString();
-                
+
                 if (placeHolder.HP <= 0)
                 {
                     mobListBox.Items.Remove(mobListBox.SelectedItem);
@@ -75,7 +75,7 @@ namespace WeilandR_HW7_3
             else
             {
                 displayTextBox.AppendText("\nPlease select a real monster to attack");
-               
+
             }
         }
 
@@ -162,8 +162,21 @@ namespace WeilandR_HW7_3
 
         private void useRoomItemButton_Click(object sender, EventArgs e)
         {
-            //this button need to be worked on.
-            displayTextBox.AppendText("\nThis item is not complete yet.");
+            Item placeHolder = null;
+
+            foreach (Item val in world.worldList[i].itemList)
+            {
+                if (val.Name == roomItemListBox.SelectedItem.ToString())
+                {
+                    placeHolder = val;
+                }
+                else
+                {
+                    displayTextBox.AppendText("\nThis item is not complete yet.");
+                }
+            }
+            displayTextBox.AppendText(placeHolder.UseEffect(player));
+            
         }
 
         private void usePlayerItemButton_Click(object sender, EventArgs e)

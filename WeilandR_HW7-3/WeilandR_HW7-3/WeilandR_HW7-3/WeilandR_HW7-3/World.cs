@@ -21,7 +21,8 @@ namespace WeilandR_HW7_3
             room1.mobList[0].Name = "Goblin";
             Item Shield = new Item();
             room1.itemList.Add(Shield);
-            room1.itemList[0].Name = "Shield";
+            room1.itemList[0].Name = "Potion of Healing";
+            room1.itemList[0].Effect = "Heal1";
             worldList.Add(room1);
             Room room2 = new Room();
             room2.rName = "Dark Room";

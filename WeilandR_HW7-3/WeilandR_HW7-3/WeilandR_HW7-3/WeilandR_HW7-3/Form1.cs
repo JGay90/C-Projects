@@ -66,9 +66,9 @@ namespace WeilandR_HW7_3
                 {
                     mobListBox.Items.Remove(mobListBox.SelectedItem);
                     world.worldList[i].checkDeaths();
-                    enemyLevelLabel.Text = world.worldList[i].mobList[mobListBox.SelectedIndex].Lvl.ToString();
-                    enemyAttackLabel.Text = world.worldList[i].mobList[mobListBox.SelectedIndex].ATK.ToString();
-                    enemyDefenseLabel.Text = world.worldList[i].mobList[mobListBox.SelectedIndex].AC.ToString();
+                    //enemyLevelLabel.Text = world.worldList[i].mobList[mobListBox.SelectedIndex].Lvl.ToString();
+                    //enemyAttackLabel.Text = world.worldList[i].mobList[mobListBox.SelectedIndex].ATK.ToString();
+                    //enemyDefenseLabel.Text = world.worldList[i].mobList[mobListBox.SelectedIndex].AC.ToString();
                     displayTextBox.AppendText("\nYou have slain the " + placeHolder.Name);
                 }
             }

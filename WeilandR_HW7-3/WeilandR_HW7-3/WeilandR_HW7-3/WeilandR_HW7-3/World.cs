@@ -39,6 +39,8 @@ namespace WeilandR_HW7_3
             Weapon sword = new Weapon();
             Weapon dagger = new Weapon();
             Weapon staff = new Weapon();
+            Treasure gold = new Treasure();
+
 
             //Room 1 stuff
             room1.rName = "Entrance";
@@ -99,6 +101,7 @@ namespace WeilandR_HW7_3
 
             //Room 10 stuff
             room10.rName = "Dragon Nest";
+            room10.itemList.Add(gold);
             worldList.Add(room10);
         }
         public void RemoveMonster()

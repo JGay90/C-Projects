@@ -100,7 +100,6 @@
             this.roomNameLabel.Name = "roomNameLabel";
             this.roomNameLabel.Size = new System.Drawing.Size(101, 21);
             this.roomNameLabel.TabIndex = 1;
-            this.roomNameLabel.Text = "Large Holding Cell";
             this.roomNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // roomGroupbox

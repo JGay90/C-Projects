@@ -41,38 +41,44 @@ namespace WeilandR_HW7_3
         {
             Creature placeHolder = null;
             int damage = 0;
-
-            foreach (Creature val in world.worldList[i].mobList)//for each creature in the list, check to see if the selected name matches the creature's.
+            if (mobListBox.SelectedIndex != -1)
             {
-                if (val.Name == mobListBox.SelectedItem.ToString())
+                foreach (Creature val in world.worldList[i].mobList)//for each creature in the list, check to see if the selected name matches the creature's.
                 {
-                    placeHolder = val;
+                    if (val.Name == mobListBox.SelectedItem.ToString())
+                    {
+                        placeHolder = val;
+                    }
+                    else
+                    {
+                        displayTextBox.AppendText("\nPlease select a monster to attack");
+                        displayTextBox.ScrollToCaret();
+                    }
+                }
+                if (placeHolder != null)//If the placeholder has a creature, do this.
+                {
+                    damage = player.weaponAttack();
+                    placeHolder.HP = placeHolder.HP - damage;
+                    displayTextBox.AppendText("\nYou deal " + damage + " damage to the " + placeHolder.Name);
+
+                    enemyHPLabel.Text = world.worldList[i].mobList[mobListBox.SelectedIndex].HP.ToString();
+
+                    if (placeHolder.HP <= 0)
+                    {
+                        mobListBox.Items.Remove(mobListBox.SelectedItem);
+                        world.worldList[i].checkDeaths();
+                        displayTextBox.AppendText("\nYou have slain the " + placeHolder.Name);
+                    }
                 }
                 else
                 {
-                    displayTextBox.AppendText("\nPlease select a monster to attack");
-                    displayTextBox.ScrollToCaret();
-                }
-            }
-            if (placeHolder != null)//If the placeholder has a creature, do this.
-            {
-                damage = player.weaponAttack();
-                placeHolder.HP = placeHolder.HP - damage;
-                displayTextBox.AppendText("\nYou deal " + damage + " damage to the " + placeHolder.Name);
+                    displayTextBox.AppendText("\nPlease select a real monster to attack");
 
-                enemyHPLabel.Text = world.worldList[i].mobList[mobListBox.SelectedIndex].HP.ToString();
-
-                if (placeHolder.HP <= 0)
-                {
-                    mobListBox.Items.Remove(mobListBox.SelectedItem);
-                    world.worldList[i].checkDeaths();
-                    displayTextBox.AppendText("\nYou have slain the " + placeHolder.Name);
                 }
             }
             else
             {
-                displayTextBox.AppendText("\nPlease select a real monster to attack");
-
+                displayTextBox.AppendText("\nAttack what?");
             }
         }
 
@@ -161,24 +167,33 @@ namespace WeilandR_HW7_3
         {
             Item placeHolder = null;
 
-            foreach (Item val in world.worldList[i].itemList)
+            if (mobListBox.SelectedIndex != -1)
             {
-                if (val.Name == roomItemListBox.SelectedItem.ToString())
+                foreach (Item val in world.worldList[i].itemList)
                 {
-                    placeHolder = val;
-                    placeHolder.durability--;
-                    roomItemListBox.Items.Remove(roomItemListBox.SelectedItem);
+                    if (val.Name == roomItemListBox.SelectedItem.ToString())
+                    {
+                        placeHolder = val;
+                        placeHolder.durability--;
+                        roomItemListBox.Items.Remove(roomItemListBox.SelectedItem);
+                    }
                 }
+                displayTextBox.AppendText(placeHolder.UseEffect(player));
+                world.worldList[i].itemList.Remove(placeHolder);
             }
-            displayTextBox.AppendText(placeHolder.UseEffect(player));
-            world.worldList[i].itemList.Remove(placeHolder);
+            else
+            {
+                displayTextBox.AppendText("\nWhat item are you using?");
+            }
         }
 
         private void usePlayerItemButton_Click(object sender, EventArgs e)
         {
             Item placeHolder = null;
 
-            foreach (Item val in player.Inventory)
+            if (mobListBox.SelectedIndex != -1)
+            {
+                foreach (Item val in player.Inventory)
             {
                 if (val.Name == playerItemListBox.SelectedItem.ToString())
                 {
@@ -189,6 +204,11 @@ namespace WeilandR_HW7_3
             }
             displayTextBox.AppendText(placeHolder.UseEffect(player));
             player.Inventory.Remove(placeHolder);
+            }
+            else
+            {
+                displayTextBox.AppendText("\nWhat item are you using in your inventory?");
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)

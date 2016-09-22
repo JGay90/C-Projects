@@ -28,7 +28,16 @@ namespace WeilandR_HW7_3
 
 
             //This is the base creature in our world.
-            Creature goblin = new Creature();
+            Creature goblin1 = new Creature();
+            Creature goblin2 = new Creature();
+            Creature goblin3 = new Creature();
+            Creature goblin4 = new Creature();
+            Creature goblin5 = new Creature();
+            Creature goblin6 = new Creature();
+            Creature goblin7 = new Creature();
+            Creature goblin8 = new Creature();
+            Creature goblin9 = new Creature();
+            Creature dragon = new Creature();
             Creature skeleton = new Creature();
             Creature wolf = new Creature();
 
@@ -62,8 +71,8 @@ namespace WeilandR_HW7_3
 
             //Room 3 stuff
             room3.rName = "Dining Hall";
-            goblin.Name = "Goblin";
-            room3.mobList.Add(goblin);
+            goblin1.Name = "Goblin";
+            room3.mobList.Add(goblin1);
             skeleton.Name = "Skeleton";
             room3.mobList.Add(skeleton);
             atkpotion.Name = "Strength Potion";
@@ -73,12 +82,24 @@ namespace WeilandR_HW7_3
 
             //Room 4 stuff
             room4.rName = "Long Hallway";
+            goblin2.Name = "Goblin";
+            goblin3.Name = "Goblin Archer";
+            goblin4.Name = "Goblin Archer";
+            room4.mobList.Add(goblin2);
+            room4.mobList.Add(goblin3);
+            room4.mobList.Add(goblin4);
             staff.Name = "Staff";
             room4.itemList.Add(staff);
             worldList.Add(room4);
             
             //Room 5 stuff
             room5.rName = "Armory";
+            goblin5.Name = "Goblin Footsoldier";
+            goblin6.Name = "Goblin Sergent";
+            goblin7.Name = "Goblin Footsoldier";
+            room5.mobList.Add(goblin5);
+            room5.mobList.Add(goblin6);
+            room5.mobList.Add(goblin7);
             dagger.Name = "Dagger";
             room5.itemList.Add(dagger);
             worldList.Add(room5);
@@ -89,10 +110,14 @@ namespace WeilandR_HW7_3
 
             //Room 7 stuff
             room7.rName = "Dungeon";
+            goblin8.Name = "Goblin Footsoldier";
+            room7.mobList.Add(goblin8);
             worldList.Add(room7);
 
             //Room 8 stuff
             room8.rName = "Large Holding Cell";
+            goblin9.Name = "Goblin Footsoldier";
+            room8.mobList.Add(goblin9);
             worldList.Add(room8);
 
             //Room 9 stuff
@@ -101,6 +126,8 @@ namespace WeilandR_HW7_3
 
             //Room 10 stuff
             room10.rName = "Dragon Nest";
+            dragon.Name = "Dragon";
+            room10.mobList.Add(dragon);
             room10.itemList.Add(gold);
             worldList.Add(room10);
         }

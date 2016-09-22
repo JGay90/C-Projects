@@ -21,6 +21,7 @@ namespace WeilandR_HW7_3
         public dungeonCrawlForm()
         {
             InitializeComponent();
+            roomNameLabel.Text = world.worldList[i].rName;
             mobPopulation();
             itemPopulation();
         }

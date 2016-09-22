@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WeilandR_HW7_3
 {
-    class Weapon:Item
+    public class Weapon:Item
     {
         public int attackValue { get; set; }
 

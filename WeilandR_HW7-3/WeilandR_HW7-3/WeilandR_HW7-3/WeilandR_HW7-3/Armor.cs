@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WeilandR_HW7_3
 {
-    class Armor:Item
+    public class Armor:Item
     {
         public int armorValue { get; set; }
 

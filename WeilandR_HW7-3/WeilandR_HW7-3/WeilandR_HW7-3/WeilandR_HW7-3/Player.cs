@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WeilandR_HW7_3
 {
-    class Player
+    public class Player
     {
         public int HP { get; set; }
         public int AC { get; set; }
@@ -23,7 +23,7 @@ namespace WeilandR_HW7_3
 
         public Player()
         {
-            HP = 10;
+            HP = 20;
             ATK = 1;
             Lvl = 1;
             EXP = 0;
@@ -43,10 +43,29 @@ namespace WeilandR_HW7_3
 
             RandomDice rand = new RandomDice();
 
-            result = rand.rollDice(10) + DMG;
+            result = rand.rollDice(6) + DMG;
 
             return result;
 
+        }
+
+        public void levelUp()
+        {
+            if(EXP >= 100)
+            {
+                EXP = EXP - 100;
+                Lvl++;
+            }
+        }
+
+        public bool checkIfDead()
+        {
+            bool isdead = false;
+            if(HP <= 0)
+            {
+                isdead = true;
+            }
+            return isdead;
         }
 
     }

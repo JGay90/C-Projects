@@ -44,10 +44,6 @@ namespace WeilandR_HW7_3
 
             //Room 1 stuff
             room1.rName = "Entrance";
-            goblin.Name = "Goblin";
-            room1.mobList.Add(goblin);
-            skeleton.Name = "Skeleton";
-            room1.mobList.Add(skeleton);
             healpotion.Name = "Potion of Healing";
             healpotion.Effect = "Heal1";
             room1.itemList.Add(healpotion);
@@ -66,6 +62,10 @@ namespace WeilandR_HW7_3
 
             //Room 3 stuff
             room3.rName = "Dining Hall";
+            goblin.Name = "Goblin";
+            room3.mobList.Add(goblin);
+            skeleton.Name = "Skeleton";
+            room3.mobList.Add(skeleton);
             atkpotion.Name = "Strength Potion";
             atkpotion.Effect = "Atk1";
             room3.itemList.Add(atkpotion);

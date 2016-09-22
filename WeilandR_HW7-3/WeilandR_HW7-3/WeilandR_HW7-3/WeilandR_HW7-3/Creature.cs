@@ -49,9 +49,14 @@ namespace WeilandR_HW7_3
 
             RandomDice rand = new RandomDice();
 
-            result = rand.rollDice(10) + DMG;
+            result = rand.rollDice(3) + DMG;
 
             return result;
+        }
+
+        public void giveXP(Player player)
+        {
+            player.EXP = player.EXP + Exp;
         }
     }
 }

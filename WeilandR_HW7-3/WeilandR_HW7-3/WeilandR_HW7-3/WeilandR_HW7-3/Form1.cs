@@ -21,18 +21,6 @@ namespace WeilandR_HW7_3
         public dungeonCrawlForm()
         {
             InitializeComponent();
-            playerHPLabel.Text = player.HP.ToString();
-            playerAttackLabel.Text = player.ATK.ToString();
-            playerDefenseLabel.Text = player.AC.ToString();
-            playerLevelLabel.Text = player.Lvl.ToString();
-            playerExpLabel.Text = player.EXP.ToString();
-            roomNameLabel.Text = world.worldList[0].rName;
-            enemyAttackLabel.Text = world.worldList[0].mobList[0].ATK.ToString();
-            enemyDefenseLabel.Text = world.worldList[0].mobList[0].AC.ToString();
-            enemyHPLabel.Text = world.worldList[0].mobList[0].HP.ToString();
-            enemyLevelLabel.Text = world.worldList[0].mobList[0].Lvl.ToString();
-            playerWeaponLabel.Text = player.Weapon.Name;
-            playerArmorLabel.Text = player.Armor.Name;
             mobPopulation();
             itemPopulation();
         }
@@ -54,26 +42,42 @@ namespace WeilandR_HW7_3
                         displayTextBox.AppendText("\nPlease select a monster to attack");
                     }
                 }
+
                 if (placeHolder != null)//If the placeholder has a creature, do this.
                 {
                     damage = player.weaponAttack();
                     placeHolder.HP = placeHolder.HP - damage;
                     displayTextBox.AppendText("\nYou deal " + damage + " damage to the " + placeHolder.Name);
-
                     enemyHPLabel.Text = world.worldList[i].mobList[mobListBox.SelectedIndex].HP.ToString();
-
                     if (placeHolder.HP <= 0)
                     {
+
                         mobListBox.Items.Remove(mobListBox.SelectedItem);
+                        placeHolder.giveXP(player);
+                        player.levelUp();
                         world.worldList[i].checkDeaths();
                         displayTextBox.AppendText("\nYou have slain the " + placeHolder.Name);
+                    }
+                    else
+                    {
+                        damage = placeHolder.rollDamnge();
+                        player.HP = player.HP - damage;
+                        displayTextBox.AppendText("\nThe " + placeHolder.Name + " deals " + damage + " damage to you.");
                     }
                 }
                 else
                 {
-                    displayTextBox.AppendText("\nPlease select a real monster to attack");
-
+                    displayTextBox.AppendText("Please select a monster to attack");
                 }
+                
+                    if(player.checkIfDead() == true)
+                    {
+                        MessageBox.Show("You died. Game over.");
+                        Application.Exit();
+                    }
+                   
+
+                    
             }
             else
             {
@@ -91,12 +95,20 @@ namespace WeilandR_HW7_3
             }
             else
             {
-                i++;
-                roomNameLabel.Text = world.worldList[i].rName;
-                mobPopulation();
-                itemPopulation();
-                player.Location++;
+                if (world.worldList[i].mobList.Count == 0)
+                {
+                    i++;
+                    roomNameLabel.Text = world.worldList[i].rName;
+                    mobPopulation();
+                    itemPopulation();
+                    player.Location++;
+                }
+                else
+                {
+                    displayTextBox.AppendText("\nThe monster blocks your path.");
+                }
             }
+            displayTextBox.ScrollToCaret();
 
         }
 

@@ -21,7 +21,7 @@ namespace WeilandR_HW7_3
         }
         public string UseEffect(Player player)
         {
-            string i;
+            string i = "";
             switch (Effect)
             {
                 case "Heal1":

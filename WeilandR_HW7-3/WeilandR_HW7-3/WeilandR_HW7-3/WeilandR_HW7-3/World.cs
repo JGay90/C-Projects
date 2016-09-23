@@ -62,7 +62,7 @@ namespace WeilandR_HW7_3
             room2.rName = "Dark Room";
             wolf.Name = "Wolf";
             room2.mobList.Add(wolf);
-            defpotion.Name = "Iron Skin Potion";
+            defpotion.Name = "Ironskin Potion";
             defpotion.Effect = "Def1";
             room2.itemList.Add(defpotion);
             sword.Name = "Sword";

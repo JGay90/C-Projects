@@ -246,7 +246,6 @@
             // 
             // playerItemListBox
             // 
-            this.playerItemListBox.DisplayMember = "Item.Name";
             this.playerItemListBox.FormattingEnabled = true;
             this.playerItemListBox.Location = new System.Drawing.Point(6, 30);
             this.playerItemListBox.Name = "playerItemListBox";

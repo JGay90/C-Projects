@@ -181,12 +181,13 @@ namespace WeilandR_HW7_3
         {
 
             Item placeHolder = null;
+            string name = roomItemListBox.SelectedItem.ToString();
 
             if (roomItemListBox.SelectedIndex != -1)
             {
                 foreach (Item val in world.worldList[i].itemList)
                 {
-                    if (val.Name == roomItemListBox.SelectedItem.ToString())
+                    if (val.Name == name)
                     {
                         placeHolder = val;
                         placeHolder.durability--;
@@ -205,20 +206,20 @@ namespace WeilandR_HW7_3
         private void usePlayerItemButton_Click(object sender, EventArgs e)
         {
             Item placeHolder = null;
-
+            string name = playerItemListBox.SelectedItem.ToString();
             if (playerItemListBox.SelectedIndex != -1)
             {
                 foreach (Item val in player.Inventory)
-            {
-                if (val.Name == playerItemListBox.SelectedItem.ToString())
                 {
-                    placeHolder = val;
-                    placeHolder.durability--;
-                    playerItemListBox.Items.Remove(playerItemListBox.SelectedItem);
+                    if (val.Name == name)
+                    {
+                        placeHolder = val;
+                        placeHolder.durability--;
+                        playerItemListBox.Items.Remove(playerItemListBox.SelectedItem);
+                    }
                 }
-            }
-            displayTextBox.AppendText(placeHolder.UseEffect(player));
-            player.Inventory.Remove(placeHolder);
+                displayTextBox.AppendText(placeHolder.UseEffect(player));
+                player.Inventory.Remove(placeHolder);
             }
             else
             {

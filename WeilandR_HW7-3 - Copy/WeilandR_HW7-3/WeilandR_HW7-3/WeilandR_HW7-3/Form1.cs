@@ -21,7 +21,6 @@ namespace WeilandR_HW7_3
         public dungeonCrawlForm()
         {
             InitializeComponent();
-            roomNameLabel.Text = world.worldList[i].rName;
             mobPopulation();
             itemPopulation();
         }
@@ -49,7 +48,6 @@ namespace WeilandR_HW7_3
                     damage = player.weaponAttack();
                     placeHolder.HP = placeHolder.HP - damage;
                     displayTextBox.AppendText("\nYou deal " + damage + " damage to the " + placeHolder.Name);
-                    enemyHPLabel.Text = world.worldList[i].mobList[mobListBox.SelectedIndex].HP.ToString();
                     if (placeHolder.HP <= 0)
                     {
 
@@ -70,15 +68,15 @@ namespace WeilandR_HW7_3
                 {
                     displayTextBox.AppendText("Please select a monster to attack");
                 }
-                
-                    if(player.checkIfDead() == true)
-                    {
-                        MessageBox.Show("You died. Game over.");
-                        Application.Exit();
-                    }
-                   
 
-                    
+                if (player.checkIfDead() == true)
+                {
+                    MessageBox.Show("You died. Game over.");
+                    Application.Exit();
+                }
+
+
+
             }
             else
             {
@@ -99,7 +97,6 @@ namespace WeilandR_HW7_3
                 if (world.worldList[i].mobList.Count == 0)
                 {
                     i++;
-                    roomNameLabel.Text = world.worldList[i].rName;
                     mobPopulation();
                     itemPopulation();
                     player.Location++;
@@ -123,7 +120,6 @@ namespace WeilandR_HW7_3
             else
             {
                 i--;
-                roomNameLabel.Text = world.worldList[i].rName;
                 mobPopulation();
                 itemPopulation();
                 player.Location--;
@@ -227,15 +223,9 @@ namespace WeilandR_HW7_3
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            playerHPLabel.Text = player.HP.ToString();
-            playerAttackLabel.Text = player.ATK.ToString();
-            playerDefenseLabel.Text = player.AC.ToString();
-            playerLevelLabel.Text = player.Lvl.ToString();
-            playerExpLabel.Text = player.EXP.ToString();
-            playerWeaponLabel.Text = player.Weapon.Name;
-            playerArmorLabel.Text = player.Armor.Name;
+        private void submitButton_Click(object sender, EventArgs e)
+        { 
+            
         }
     }
 }

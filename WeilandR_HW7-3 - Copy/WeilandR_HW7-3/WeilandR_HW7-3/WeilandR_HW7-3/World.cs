@@ -131,6 +131,9 @@ namespace WeilandR_HW7_3
             room10.itemList.Add(gold);
             worldList.Add(room10);
         }
+
+        public IEnumerable<object> Item { get; internal set; }
+
         public void RemoveMonster()
         {
 

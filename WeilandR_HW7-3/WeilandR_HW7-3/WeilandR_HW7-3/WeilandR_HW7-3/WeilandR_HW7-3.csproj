@@ -50,6 +50,7 @@
     <Compile Include="Command.cs" />
     <Compile Include="Creature.cs" />
     <Compile Include="Dice.cs" />
+    <Compile Include="Exit.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

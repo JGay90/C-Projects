@@ -61,7 +61,7 @@ namespace WeilandR_HW7_3
                     }
                     else
                     {
-                        damage = placeHolder.rollDamnge();
+                        damage = placeHolder.rollDamage();
                         player.HP = player.HP - damage;
                         displayTextBox.AppendText("\nThe " + placeHolder.Name + " deals " + damage + " damage to you.");
                     }

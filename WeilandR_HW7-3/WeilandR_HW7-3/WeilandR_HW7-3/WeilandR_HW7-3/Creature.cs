@@ -43,7 +43,7 @@ namespace WeilandR_HW7_3
             //i = Image.FromFile("Bestiary.png");
         }
 
-        public int rollDamnge()
+        public int rollDamage()
         {
             int result = 0;
 

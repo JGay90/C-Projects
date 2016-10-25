@@ -17,21 +17,39 @@ namespace WeilandR_HW7_3
             {
                 case Go:
 
+                    break;
+
                 case Look:
+
+                    break;
 
                 case Take:
 
+                    break;
+
                 case Get:
+
+                    break;
 
                 case Drop:
 
+                    break;
+
                 case Open:
+
+                    break;
 
                 case Inventory:
 
+                    break;
+
                 case Score:
 
+                    break;
+
                 case Quit:
+
+                    break;
             }
 
 

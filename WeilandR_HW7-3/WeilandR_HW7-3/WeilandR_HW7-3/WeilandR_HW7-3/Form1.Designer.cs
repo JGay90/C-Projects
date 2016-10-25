@@ -68,6 +68,8 @@
             this.displayTextBox = new System.Windows.Forms.RichTextBox();
             this.combatLogGroupbox = new System.Windows.Forms.GroupBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.commandTextBox = new System.Windows.Forms.TextBox();
+            this.submitButton = new System.Windows.Forms.Button();
             this.roomGroupbox.SuspendLayout();
             this.InventoryGroupbox.SuspendLayout();
             this.combatGroupbox.SuspendLayout();
@@ -445,7 +447,7 @@
             this.displayTextBox.MaxLength = 300;
             this.displayTextBox.Name = "displayTextBox";
             this.displayTextBox.ReadOnly = true;
-            this.displayTextBox.Size = new System.Drawing.Size(560, 115);
+            this.displayTextBox.Size = new System.Drawing.Size(560, 330);
             this.displayTextBox.TabIndex = 6;
             this.displayTextBox.Text = "";
             // 
@@ -454,10 +456,10 @@
             this.combatLogGroupbox.Controls.Add(this.displayTextBox);
             this.combatLogGroupbox.Location = new System.Drawing.Point(19, 33);
             this.combatLogGroupbox.Name = "combatLogGroupbox";
-            this.combatLogGroupbox.Size = new System.Drawing.Size(577, 138);
+            this.combatLogGroupbox.Size = new System.Drawing.Size(577, 359);
             this.combatLogGroupbox.TabIndex = 7;
             this.combatLogGroupbox.TabStop = false;
-            this.combatLogGroupbox.Text = "Combat Log";
+            this.combatLogGroupbox.Text = "Action Log";
             // 
             // timer1
             // 
@@ -465,11 +467,30 @@
             this.timer1.Interval = 300;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // commandTextBox
+            // 
+            this.commandTextBox.Location = new System.Drawing.Point(25, 409);
+            this.commandTextBox.MaxLength = 100;
+            this.commandTextBox.Name = "commandTextBox";
+            this.commandTextBox.Size = new System.Drawing.Size(446, 20);
+            this.commandTextBox.TabIndex = 8;
+            // 
+            // submitButton
+            // 
+            this.submitButton.Location = new System.Drawing.Point(488, 409);
+            this.submitButton.Name = "submitButton";
+            this.submitButton.Size = new System.Drawing.Size(75, 23);
+            this.submitButton.TabIndex = 9;
+            this.submitButton.Text = "&Submit";
+            this.submitButton.UseVisualStyleBackColor = true;
+            // 
             // dungeonCrawlForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1265, 477);
+            this.Controls.Add(this.submitButton);
+            this.Controls.Add(this.commandTextBox);
             this.Controls.Add(this.combatLogGroupbox);
             this.Controls.Add(this.combatGroupbox);
             this.Controls.Add(this.roomNameLabel);
@@ -534,6 +555,8 @@
         private System.Windows.Forms.Label armorLabel;
         private System.Windows.Forms.Label weaponLabel;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TextBox commandTextBox;
+        private System.Windows.Forms.Button submitButton;
     }
 }
 

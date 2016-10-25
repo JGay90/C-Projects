@@ -55,16 +55,16 @@
             this.mobDefenseLabel = new System.Windows.Forms.Label();
             this.enemyHPLabel = new System.Windows.Forms.Label();
             this.playerGroupbox = new System.Windows.Forms.GroupBox();
+            this.playerExpLabel = new System.Windows.Forms.Label();
             this.playerLevelLabel = new System.Windows.Forms.Label();
             this.playerDefenseLabel = new System.Windows.Forms.Label();
+            this.expLabel = new System.Windows.Forms.Label();
             this.playerAttackLabel = new System.Windows.Forms.Label();
             this.playerHPLabel = new System.Windows.Forms.Label();
             this.levelLabel = new System.Windows.Forms.Label();
             this.defenseLabel = new System.Windows.Forms.Label();
             this.attackLabel = new System.Windows.Forms.Label();
             this.hpLabel = new System.Windows.Forms.Label();
-            this.playerExpLabel = new System.Windows.Forms.Label();
-            this.expLabel = new System.Windows.Forms.Label();
             this.displayTextBox = new System.Windows.Forms.RichTextBox();
             this.combatLogGroupbox = new System.Windows.Forms.GroupBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -350,6 +350,15 @@
             this.playerGroupbox.TabStop = false;
             this.playerGroupbox.Text = "Player";
             // 
+            // playerExpLabel
+            // 
+            this.playerExpLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.playerExpLabel.Location = new System.Drawing.Point(61, 113);
+            this.playerExpLabel.Name = "playerExpLabel";
+            this.playerExpLabel.Size = new System.Drawing.Size(119, 23);
+            this.playerExpLabel.TabIndex = 1;
+            this.playerExpLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // playerLevelLabel
             // 
             this.playerLevelLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -367,6 +376,15 @@
             this.playerDefenseLabel.Size = new System.Drawing.Size(119, 23);
             this.playerDefenseLabel.TabIndex = 1;
             this.playerDefenseLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // expLabel
+            // 
+            this.expLabel.AutoSize = true;
+            this.expLabel.Location = new System.Drawing.Point(28, 118);
+            this.expLabel.Name = "expLabel";
+            this.expLabel.Size = new System.Drawing.Size(28, 13);
+            this.expLabel.TabIndex = 0;
+            this.expLabel.Text = "Exp:";
             // 
             // playerAttackLabel
             // 
@@ -422,24 +440,6 @@
             this.hpLabel.TabIndex = 0;
             this.hpLabel.Text = "HP:";
             // 
-            // playerExpLabel
-            // 
-            this.playerExpLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.playerExpLabel.Location = new System.Drawing.Point(61, 113);
-            this.playerExpLabel.Name = "playerExpLabel";
-            this.playerExpLabel.Size = new System.Drawing.Size(119, 23);
-            this.playerExpLabel.TabIndex = 1;
-            this.playerExpLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // expLabel
-            // 
-            this.expLabel.AutoSize = true;
-            this.expLabel.Location = new System.Drawing.Point(28, 118);
-            this.expLabel.Name = "expLabel";
-            this.expLabel.Size = new System.Drawing.Size(28, 13);
-            this.expLabel.TabIndex = 0;
-            this.expLabel.Text = "Exp:";
-            // 
             // displayTextBox
             // 
             this.displayTextBox.BackColor = System.Drawing.SystemColors.Window;
@@ -483,6 +483,7 @@
             this.submitButton.TabIndex = 9;
             this.submitButton.Text = "&Submit";
             this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
             // dungeonCrawlForm
             // 

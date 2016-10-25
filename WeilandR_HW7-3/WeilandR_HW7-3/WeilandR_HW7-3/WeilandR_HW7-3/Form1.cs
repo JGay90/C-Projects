@@ -237,5 +237,12 @@ namespace WeilandR_HW7_3
             playerWeaponLabel.Text = player.Weapon.Name;
             playerArmorLabel.Text = player.Armor.Name;
         }
+
+        private void submitButton_Click(object sender, EventArgs e)
+        {
+            Command c = new Command();
+            string input = commandTextBox.Text;
+            displayTextBox.AppendText(c.Command(input));
+        }
     }
 }

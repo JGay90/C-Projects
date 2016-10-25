@@ -17,7 +17,7 @@ namespace WeilandR_HW7_3
 
         public List<Item> itemList = new List<Item>();
 
-        public List<Exit> exitList = new List<Exit>();
+        public List<string> exitList = new List<string>();
 
         private int roomID = 0;
 

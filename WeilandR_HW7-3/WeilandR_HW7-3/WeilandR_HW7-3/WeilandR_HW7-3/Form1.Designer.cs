@@ -32,18 +32,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.roomNameLabel = new System.Windows.Forms.Label();
             this.roomGroupbox = new System.Windows.Forms.GroupBox();
-            this.useRoomItemButton = new System.Windows.Forms.Button();
-            this.pickUpItemButton = new System.Windows.Forms.Button();
-            this.attackMobButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.roomItemListBox = new System.Windows.Forms.ListBox();
             this.mobListBox = new System.Windows.Forms.ListBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.backButton = new System.Windows.Forms.Button();
-            this.forwardButton = new System.Windows.Forms.Button();
             this.InventoryGroupbox = new System.Windows.Forms.GroupBox();
-            this.usePlayerItemButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.playerItemListBox = new System.Windows.Forms.ListBox();
             this.combatGroupbox = new System.Windows.Forms.GroupBox();
@@ -104,49 +97,16 @@
             // 
             // roomGroupbox
             // 
-            this.roomGroupbox.Controls.Add(this.useRoomItemButton);
-            this.roomGroupbox.Controls.Add(this.pickUpItemButton);
-            this.roomGroupbox.Controls.Add(this.attackMobButton);
             this.roomGroupbox.Controls.Add(this.label3);
             this.roomGroupbox.Controls.Add(this.label2);
             this.roomGroupbox.Controls.Add(this.roomItemListBox);
             this.roomGroupbox.Controls.Add(this.mobListBox);
-            this.roomGroupbox.Location = new System.Drawing.Point(15, 177);
+            this.roomGroupbox.Location = new System.Drawing.Point(6, 301);
             this.roomGroupbox.Name = "roomGroupbox";
-            this.roomGroupbox.Size = new System.Drawing.Size(383, 148);
+            this.roomGroupbox.Size = new System.Drawing.Size(396, 125);
             this.roomGroupbox.TabIndex = 2;
             this.roomGroupbox.TabStop = false;
             this.roomGroupbox.Text = "Room";
-            // 
-            // useRoomItemButton
-            // 
-            this.useRoomItemButton.Location = new System.Drawing.Point(286, 118);
-            this.useRoomItemButton.Name = "useRoomItemButton";
-            this.useRoomItemButton.Size = new System.Drawing.Size(75, 23);
-            this.useRoomItemButton.TabIndex = 2;
-            this.useRoomItemButton.Text = "Use";
-            this.useRoomItemButton.UseVisualStyleBackColor = true;
-            this.useRoomItemButton.Click += new System.EventHandler(this.useRoomItemButton_Click);
-            // 
-            // pickUpItemButton
-            // 
-            this.pickUpItemButton.Location = new System.Drawing.Point(205, 118);
-            this.pickUpItemButton.Name = "pickUpItemButton";
-            this.pickUpItemButton.Size = new System.Drawing.Size(75, 23);
-            this.pickUpItemButton.TabIndex = 2;
-            this.pickUpItemButton.Text = "Pick Up";
-            this.pickUpItemButton.UseVisualStyleBackColor = true;
-            this.pickUpItemButton.Click += new System.EventHandler(this.pickUpItemButton_Click);
-            // 
-            // attackMobButton
-            // 
-            this.attackMobButton.Location = new System.Drawing.Point(67, 118);
-            this.attackMobButton.Name = "attackMobButton";
-            this.attackMobButton.Size = new System.Drawing.Size(75, 23);
-            this.attackMobButton.TabIndex = 2;
-            this.attackMobButton.Text = "Attack";
-            this.attackMobButton.UseVisualStyleBackColor = true;
-            this.attackMobButton.Click += new System.EventHandler(this.attackMobButton_Click);
             // 
             // label3
             // 
@@ -169,7 +129,7 @@
             // roomItemListBox
             // 
             this.roomItemListBox.FormattingEnabled = true;
-            this.roomItemListBox.Location = new System.Drawing.Point(192, 30);
+            this.roomItemListBox.Location = new System.Drawing.Point(210, 30);
             this.roomItemListBox.Name = "roomItemListBox";
             this.roomItemListBox.Size = new System.Drawing.Size(180, 82);
             this.roomItemListBox.Sorted = true;
@@ -184,56 +144,16 @@
             this.mobListBox.Sorted = true;
             this.mobListBox.TabIndex = 0;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(209, 11);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Movement:";
-            // 
-            // backButton
-            // 
-            this.backButton.Location = new System.Drawing.Point(268, 6);
-            this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(56, 23);
-            this.backButton.TabIndex = 3;
-            this.backButton.Text = "Back";
-            this.backButton.UseVisualStyleBackColor = true;
-            this.backButton.Click += new System.EventHandler(this.backButton_Click);
-            // 
-            // forwardButton
-            // 
-            this.forwardButton.Location = new System.Drawing.Point(330, 6);
-            this.forwardButton.Name = "forwardButton";
-            this.forwardButton.Size = new System.Drawing.Size(56, 23);
-            this.forwardButton.TabIndex = 3;
-            this.forwardButton.Text = "Forward";
-            this.forwardButton.UseVisualStyleBackColor = true;
-            this.forwardButton.Click += new System.EventHandler(this.forwardButton_Click);
-            // 
             // InventoryGroupbox
             // 
-            this.InventoryGroupbox.Controls.Add(this.usePlayerItemButton);
             this.InventoryGroupbox.Controls.Add(this.label5);
             this.InventoryGroupbox.Controls.Add(this.playerItemListBox);
-            this.InventoryGroupbox.Location = new System.Drawing.Point(404, 177);
+            this.InventoryGroupbox.Location = new System.Drawing.Point(210, 164);
             this.InventoryGroupbox.Name = "InventoryGroupbox";
-            this.InventoryGroupbox.Size = new System.Drawing.Size(192, 148);
+            this.InventoryGroupbox.Size = new System.Drawing.Size(192, 131);
             this.InventoryGroupbox.TabIndex = 4;
             this.InventoryGroupbox.TabStop = false;
             this.InventoryGroupbox.Text = "Inventory";
-            // 
-            // usePlayerItemButton
-            // 
-            this.usePlayerItemButton.Location = new System.Drawing.Point(60, 118);
-            this.usePlayerItemButton.Name = "usePlayerItemButton";
-            this.usePlayerItemButton.Size = new System.Drawing.Size(75, 23);
-            this.usePlayerItemButton.TabIndex = 2;
-            this.usePlayerItemButton.Text = "Use";
-            this.usePlayerItemButton.UseVisualStyleBackColor = true;
-            this.usePlayerItemButton.Click += new System.EventHandler(this.usePlayerItemButton_Click);
             // 
             // label5
             // 
@@ -258,9 +178,11 @@
             this.combatGroupbox.Controls.Add(this.equipmentGroupbox);
             this.combatGroupbox.Controls.Add(this.enemyGroupbox);
             this.combatGroupbox.Controls.Add(this.playerGroupbox);
-            this.combatGroupbox.Location = new System.Drawing.Point(15, 331);
+            this.combatGroupbox.Controls.Add(this.InventoryGroupbox);
+            this.combatGroupbox.Controls.Add(this.roomGroupbox);
+            this.combatGroupbox.Location = new System.Drawing.Point(602, 33);
             this.combatGroupbox.Name = "combatGroupbox";
-            this.combatGroupbox.Size = new System.Drawing.Size(581, 142);
+            this.combatGroupbox.Size = new System.Drawing.Size(420, 432);
             this.combatGroupbox.TabIndex = 5;
             this.combatGroupbox.TabStop = false;
             this.combatGroupbox.Text = "Combat";
@@ -273,7 +195,7 @@
             this.equipmentGroupbox.Controls.Add(this.weaponLabel);
             this.equipmentGroupbox.Location = new System.Drawing.Point(215, 19);
             this.equipmentGroupbox.Name = "equipmentGroupbox";
-            this.equipmentGroupbox.Size = new System.Drawing.Size(151, 118);
+            this.equipmentGroupbox.Size = new System.Drawing.Size(187, 118);
             this.equipmentGroupbox.TabIndex = 1;
             this.equipmentGroupbox.TabStop = false;
             this.equipmentGroupbox.Text = "Equipment";
@@ -283,7 +205,7 @@
             this.playerArmorLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.playerArmorLabel.Location = new System.Drawing.Point(9, 89);
             this.playerArmorLabel.Name = "playerArmorLabel";
-            this.playerArmorLabel.Size = new System.Drawing.Size(119, 23);
+            this.playerArmorLabel.Size = new System.Drawing.Size(172, 23);
             this.playerArmorLabel.TabIndex = 3;
             this.playerArmorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -292,7 +214,7 @@
             this.playerWeaponLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.playerWeaponLabel.Location = new System.Drawing.Point(9, 37);
             this.playerWeaponLabel.Name = "playerWeaponLabel";
-            this.playerWeaponLabel.Size = new System.Drawing.Size(119, 23);
+            this.playerWeaponLabel.Size = new System.Drawing.Size(172, 23);
             this.playerWeaponLabel.TabIndex = 2;
             this.playerWeaponLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -324,7 +246,7 @@
             this.enemyGroupbox.Controls.Add(this.enemyAttackLabel);
             this.enemyGroupbox.Controls.Add(this.mobDefenseLabel);
             this.enemyGroupbox.Controls.Add(this.enemyHPLabel);
-            this.enemyGroupbox.Location = new System.Drawing.Point(377, 19);
+            this.enemyGroupbox.Location = new System.Drawing.Point(6, 175);
             this.enemyGroupbox.Name = "enemyGroupbox";
             this.enemyGroupbox.Size = new System.Drawing.Size(198, 118);
             this.enemyGroupbox.TabIndex = 0;
@@ -409,8 +331,10 @@
             // 
             // playerGroupbox
             // 
+            this.playerGroupbox.Controls.Add(this.playerExpLabel);
             this.playerGroupbox.Controls.Add(this.playerLevelLabel);
             this.playerGroupbox.Controls.Add(this.playerDefenseLabel);
+            this.playerGroupbox.Controls.Add(this.expLabel);
             this.playerGroupbox.Controls.Add(this.playerAttackLabel);
             this.playerGroupbox.Controls.Add(this.playerHPLabel);
             this.playerGroupbox.Controls.Add(this.levelLabel);
@@ -419,7 +343,7 @@
             this.playerGroupbox.Controls.Add(this.hpLabel);
             this.playerGroupbox.Location = new System.Drawing.Point(6, 19);
             this.playerGroupbox.Name = "playerGroupbox";
-            this.playerGroupbox.Size = new System.Drawing.Size(198, 118);
+            this.playerGroupbox.Size = new System.Drawing.Size(198, 150);
             this.playerGroupbox.TabIndex = 0;
             this.playerGroupbox.TabStop = false;
             this.playerGroupbox.Text = "Player";
@@ -499,7 +423,7 @@
             // playerExpLabel
             // 
             this.playerExpLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.playerExpLabel.Location = new System.Drawing.Point(471, 6);
+            this.playerExpLabel.Location = new System.Drawing.Point(61, 113);
             this.playerExpLabel.Name = "playerExpLabel";
             this.playerExpLabel.Size = new System.Drawing.Size(119, 23);
             this.playerExpLabel.TabIndex = 1;
@@ -508,7 +432,7 @@
             // expLabel
             // 
             this.expLabel.AutoSize = true;
-            this.expLabel.Location = new System.Drawing.Point(438, 11);
+            this.expLabel.Location = new System.Drawing.Point(28, 118);
             this.expLabel.Name = "expLabel";
             this.expLabel.Size = new System.Drawing.Size(28, 13);
             this.expLabel.TabIndex = 0;
@@ -545,17 +469,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(612, 477);
-            this.Controls.Add(this.playerExpLabel);
+            this.ClientSize = new System.Drawing.Size(1265, 477);
             this.Controls.Add(this.combatLogGroupbox);
             this.Controls.Add(this.combatGroupbox);
-            this.Controls.Add(this.InventoryGroupbox);
-            this.Controls.Add(this.forwardButton);
-            this.Controls.Add(this.expLabel);
-            this.Controls.Add(this.backButton);
-            this.Controls.Add(this.roomGroupbox);
             this.Controls.Add(this.roomNameLabel);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Name = "dungeonCrawlForm";
             this.Text = "Dungeon Crawl";
@@ -581,18 +498,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label roomNameLabel;
         private System.Windows.Forms.GroupBox roomGroupbox;
-        private System.Windows.Forms.Button useRoomItemButton;
-        private System.Windows.Forms.Button pickUpItemButton;
-        private System.Windows.Forms.Button attackMobButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox roomItemListBox;
         private System.Windows.Forms.ListBox mobListBox;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button backButton;
-        private System.Windows.Forms.Button forwardButton;
         private System.Windows.Forms.GroupBox InventoryGroupbox;
-        private System.Windows.Forms.Button usePlayerItemButton;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListBox playerItemListBox;
         private System.Windows.Forms.GroupBox combatGroupbox;

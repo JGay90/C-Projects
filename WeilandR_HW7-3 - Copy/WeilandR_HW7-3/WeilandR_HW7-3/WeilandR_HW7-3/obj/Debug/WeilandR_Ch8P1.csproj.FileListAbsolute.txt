@@ -7,3 +7,6 @@ C:\Users\Xavier\Source\Repos\C-Projects\WeilandR_HW7-3 - Copy\WeilandR_HW7-3\Wei
 C:\Users\Xavier\Source\Repos\C-Projects\WeilandR_HW7-3 - Copy\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7_3.dungeonCrawlForm.resources
 C:\Users\Xavier\Source\Repos\C-Projects\WeilandR_HW7-3 - Copy\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7_3.Properties.Resources.resources
 C:\Users\Xavier\Source\Repos\C-Projects\WeilandR_HW7-3 - Copy\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_Ch8P1.csproj.GenerateResource.Cache
+C:\Users\nelsonj5726\Source\Repos\C-Projects\WeilandR_HW7-3 - Copy\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\bin\Debug\WeilandR_HW7-3.exe.config
+C:\Users\nelsonj5726\Source\Repos\C-Projects\WeilandR_HW7-3 - Copy\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7-3.exe
+C:\Users\nelsonj5726\Source\Repos\C-Projects\WeilandR_HW7-3 - Copy\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7-3.pdb

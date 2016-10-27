@@ -121,7 +121,7 @@ namespace WeilandR_HW7_3
         {
             string score = "";
 
-            score += Player.getEXP();
+           score += Player.getEXP();
 
             return score;
         }

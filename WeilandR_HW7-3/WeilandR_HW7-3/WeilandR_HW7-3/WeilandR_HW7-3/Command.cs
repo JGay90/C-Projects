@@ -9,17 +9,19 @@ namespace WeilandR_HW7_3
     class Command : dungeonCrawlForm
     {
         string input;
+        public World world = new World();
+        public Player player = new Player();
 
         public string Handler(string input)
         {
             string handler = "";
             switch(handler)
             {
-                case Go:
+                case "Go":
                      
                     break;
 
-                case Look:
+                case "Look":
 
                     break;
 

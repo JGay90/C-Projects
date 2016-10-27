@@ -59,15 +59,14 @@ namespace WeilandR_HW7_3
         public string Go()
         {
             string go = "";
-
-
+            
 
             return go;
         }
         public string Look()
         {
             string look = "";
-
+            
 
 
             return look;

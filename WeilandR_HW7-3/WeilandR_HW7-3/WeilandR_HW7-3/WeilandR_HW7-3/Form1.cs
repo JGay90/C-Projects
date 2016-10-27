@@ -240,6 +240,7 @@ namespace WeilandR_HW7_3
         {
             string input = commandTextBox.Text;
             displayTextBox.AppendText(com.Handler(input));
+            displayTextBox.ScrollToCaret();
         }
     }
 }

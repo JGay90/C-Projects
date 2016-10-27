@@ -13,15 +13,13 @@ namespace WeilandR_HW7_3
 {
     public partial class dungeonCrawlForm : Form
     {
-
-        World world = new World();
-        Player player = new Player();
+        Command com = new Command();
         int i;
 
         public dungeonCrawlForm()
         {
             InitializeComponent();
-            roomNameLabel.Text = world.worldList[i].rName;
+            roomNameLabel.Text = com.world.worldList[i].rName;
             mobPopulation();
             itemPopulation();
         }
@@ -32,7 +30,7 @@ namespace WeilandR_HW7_3
             int damage = 0;
             if (mobListBox.SelectedIndex != -1)
             {
-                foreach (Creature val in world.worldList[i].mobList)//for each creature in the list, check to see if the selected name matches the creature's.
+                foreach (Creature val in com.world.worldList[i].mobList)//for each creature in the list, check to see if the selected name matches the creature's.
                 {
                     if (val.Name == mobListBox.SelectedItem.ToString())
                     {
@@ -46,23 +44,23 @@ namespace WeilandR_HW7_3
 
                 if (placeHolder != null)//If the placeholder has a creature, do this.
                 {
-                    damage = player.weaponAttack();
+                    damage = com.player.weaponAttack();
                     placeHolder.HP = placeHolder.HP - damage;
                     displayTextBox.AppendText("\nYou deal " + damage + " damage to the " + placeHolder.Name);
-                    enemyHPLabel.Text = world.worldList[i].mobList[mobListBox.SelectedIndex].HP.ToString();
+                    enemyHPLabel.Text = com.world.worldList[i].mobList[mobListBox.SelectedIndex].HP.ToString();
                     if (placeHolder.HP <= 0)
                     {
 
                         mobListBox.Items.Remove(mobListBox.SelectedItem);
-                        placeHolder.giveXP(player);
-                        player.levelUp();
-                        world.worldList[i].checkDeaths();
+                        placeHolder.giveXP(com.player);
+                        com.player.levelUp();
+                        com.world.worldList[i].checkDeaths();
                         displayTextBox.AppendText("\nYou have slain the " + placeHolder.Name);
                     }
                     else
                     {
                         damage = placeHolder.rollDamage();
-                        player.HP = player.HP - damage;
+                        com.player.HP = com.player.HP - damage;
                         displayTextBox.AppendText("\nThe " + placeHolder.Name + " deals " + damage + " damage to you.");
                     }
                 }
@@ -71,7 +69,7 @@ namespace WeilandR_HW7_3
                     displayTextBox.AppendText("Please select a monster to attack");
                 }
                 
-                    if(player.checkIfDead() == true)
+                    if(com.player.checkIfDead() == true)
                     {
                         MessageBox.Show("You died. Game over.");
                         Application.Exit();
@@ -96,13 +94,13 @@ namespace WeilandR_HW7_3
             }
             else
             {
-                if (world.worldList[i].mobList.Count == 0)
+                if (com.world.worldList[i].mobList.Count == 0)
                 {
                     i++;
-                    roomNameLabel.Text = world.worldList[i].rName;
+                    roomNameLabel.Text = com.world.worldList[i].rName;
                     mobPopulation();
                     itemPopulation();
-                    player.Location++;
+                    com.player.Location++;
                 }
                 else
                 {
@@ -123,16 +121,16 @@ namespace WeilandR_HW7_3
             else
             {
                 i--;
-                roomNameLabel.Text = world.worldList[i].rName;
+                roomNameLabel.Text = com.world.worldList[i].rName;
                 mobPopulation();
                 itemPopulation();
-                player.Location--;
+                com.player.Location--;
             }
         }
         private void mobPopulation()
         {
             mobListBox.Items.Clear();
-            foreach (Creature val in world.worldList[i].mobList)
+            foreach (Creature val in com.world.worldList[i].mobList)
             {
                 mobListBox.Items.Add(val.Name);
             }
@@ -140,7 +138,7 @@ namespace WeilandR_HW7_3
         private void itemPopulation()
         {
             roomItemListBox.Items.Clear();
-            foreach (Item val in world.worldList[i].itemList)
+            foreach (Item val in com.world.worldList[i].itemList)
             {
                 roomItemListBox.Items.Add(val.Name);
             }
@@ -150,7 +148,7 @@ namespace WeilandR_HW7_3
         {
             Item placeHolder = null;
 
-            foreach (Item val in world.worldList[i].itemList)//for each item in the list, check to see if the selected name matches the item's.
+            foreach (Item val in com.world.worldList[i].itemList)//for each item in the list, check to see if the selected name matches the item's.
             {
                 if (val.Name == roomItemListBox.SelectedItem.ToString())
                 {
@@ -164,10 +162,10 @@ namespace WeilandR_HW7_3
             }
             if (placeHolder != null)//If the placeholder has an item, do this.
             {
-                world.worldList[i].itemList.Remove(placeHolder);
+                com.world.worldList[i].itemList.Remove(placeHolder);
                 roomItemListBox.Items.Remove(roomItemListBox.SelectedItem);
                 displayTextBox.AppendText("\nYou pick up the " + placeHolder.Name);
-                player.Inventory.Add(placeHolder);
+                com.player.Inventory.Add(placeHolder);
                 playerItemListBox.Items.Add(placeHolder.Name);
             }
             else
@@ -185,7 +183,7 @@ namespace WeilandR_HW7_3
 
             if (roomItemListBox.SelectedIndex != -1)
             {
-                foreach (Item val in world.worldList[i].itemList)
+                foreach (Item val in com.world.worldList[i].itemList)
                 {
                     if (val.Name == name)
                     {
@@ -194,8 +192,8 @@ namespace WeilandR_HW7_3
                         roomItemListBox.Items.Remove(roomItemListBox.SelectedItem);
                     }
                 }
-                displayTextBox.AppendText(placeHolder.UseEffect(player));
-                world.worldList[i].itemList.Remove(placeHolder);
+                displayTextBox.AppendText(placeHolder.UseEffect(com.player));
+                com.world.worldList[i].itemList.Remove(placeHolder);
             }
             else
             {
@@ -209,7 +207,7 @@ namespace WeilandR_HW7_3
             string name = playerItemListBox.SelectedItem.ToString();
             if (playerItemListBox.SelectedIndex != -1)
             {
-                foreach (Item val in player.Inventory)
+                foreach (Item val in com.player.Inventory)
                 {
                     if (val.Name == name)
                     {
@@ -218,8 +216,8 @@ namespace WeilandR_HW7_3
                         playerItemListBox.Items.Remove(playerItemListBox.SelectedItem);
                     }
                 }
-                displayTextBox.AppendText(placeHolder.UseEffect(player));
-                player.Inventory.Remove(placeHolder);
+                displayTextBox.AppendText(placeHolder.UseEffect(com.player));
+                com.player.Inventory.Remove(placeHolder);
             }
             else
             {
@@ -229,20 +227,19 @@ namespace WeilandR_HW7_3
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            playerHPLabel.Text = player.HP.ToString();
-            playerAttackLabel.Text = player.ATK.ToString();
-            playerDefenseLabel.Text = player.AC.ToString();
-            playerLevelLabel.Text = player.Lvl.ToString();
-            playerExpLabel.Text = player.EXP.ToString();
-            playerWeaponLabel.Text = player.Weapon.Name;
-            playerArmorLabel.Text = player.Armor.Name;
+            playerHPLabel.Text = com.player.HP.ToString();
+            playerAttackLabel.Text = com.player.ATK.ToString();
+            playerDefenseLabel.Text = com.player.AC.ToString();
+            playerLevelLabel.Text = com.player.Lvl.ToString();
+            playerExpLabel.Text = com.player.EXP.ToString();
+            playerWeaponLabel.Text = com.player.Weapon.Name;
+            playerArmorLabel.Text = com.player.Armor.Name;
         }
 
         private void submitButton_Click(object sender, EventArgs e)
         {
-            Command c = new Command();
             string input = commandTextBox.Text;
-            displayTextBox.AppendText(c.Command(input));
+            displayTextBox.AppendText(com.Handler(input));
         }
     }
 }

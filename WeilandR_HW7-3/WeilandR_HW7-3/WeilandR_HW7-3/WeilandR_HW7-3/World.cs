@@ -57,6 +57,7 @@ namespace WeilandR_HW7_3
             healpotion.Effect = "Heal1";
             room1.itemList.Add(healpotion);
             room1.exitList.Add("Placeholder");
+            room1.RID = 1;
             worldList.Add(room1);
 
             //Room 2 stuff
@@ -69,6 +70,7 @@ namespace WeilandR_HW7_3
             sword.Name = "Sword";
             room2.itemList.Add(sword);
             room2.exitList.Add("Placeholder");
+            room2.RID = 2;
             worldList.Add(room2);
 
             //Room 3 stuff
@@ -81,6 +83,7 @@ namespace WeilandR_HW7_3
             atkpotion.Effect = "Atk1";
             room3.itemList.Add(atkpotion);
             room3.exitList.Add("Placeholder");
+            room3.RID = 3;
             worldList.Add(room3);
 
             //Room 4 stuff
@@ -94,6 +97,7 @@ namespace WeilandR_HW7_3
             staff.Name = "Staff";
             room4.itemList.Add(staff);
             room4.exitList.Add("Placeholder");
+            room4.RID = 4;
             worldList.Add(room4);
             
             //Room 5 stuff
@@ -107,11 +111,13 @@ namespace WeilandR_HW7_3
             dagger.Name = "Dagger";
             room5.itemList.Add(dagger);
             room5.exitList.Add("Placeholder");
+            room5.RID = 5;
             worldList.Add(room5);
 
             //Room 6 stuff
             room6.rName = "Tallest Tower";
             room6.exitList.Add("Placeholder");
+            room6.RID = 6;
             worldList.Add(room6);
 
             //Room 7 stuff
@@ -119,6 +125,7 @@ namespace WeilandR_HW7_3
             goblin8.Name = "Goblin Footsoldier";
             room7.mobList.Add(goblin8);
             room7.exitList.Add("Placeholder");
+            room7.RID = 7;
             worldList.Add(room7);
 
             //Room 8 stuff
@@ -126,11 +133,13 @@ namespace WeilandR_HW7_3
             goblin9.Name = "Goblin Footsoldier";
             room8.mobList.Add(goblin9);
             room8.exitList.Add("Placeholder");
+            room8.RID = 8;
             worldList.Add(room8);
 
             //Room 9 stuff
             room9.rName = "Secret Cave";
             room9.exitList.Add("Placeholder");
+            room9.RID = 9;
             worldList.Add(room9);
 
             //Room 10 stuff
@@ -139,6 +148,7 @@ namespace WeilandR_HW7_3
             room10.mobList.Add(dragon);
             room10.itemList.Add(gold);
             room10.exitList.Add("Placeholder");
+            room10.RID = 10;
             worldList.Add(room10);
         }
         public void RemoveMonster()

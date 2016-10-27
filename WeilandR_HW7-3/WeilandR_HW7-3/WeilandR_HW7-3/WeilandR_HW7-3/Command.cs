@@ -25,31 +25,31 @@ namespace WeilandR_HW7_3
 
                     break;
 
-                case Take:
+                case "Take":
 
                     break;
 
-                case Get:
+                case "Get":
 
                     break;
 
-                case Drop:
+                case "Drop":
 
                     break;
 
-                case Open:
+                case "Open":
 
                     break;
 
-                case Inventory:
+                case "Inventory":
 
                     break;
 
-                case Score:
+                case "Score":
 
                     break;
 
-                case Quit:
+                case "Quit":
 
                     break;
             }
@@ -111,9 +111,9 @@ namespace WeilandR_HW7_3
         {
             string inventory = "";
 
-            for (int i = 0; i<= List.lenghth; i++)
+            for (int i = 0; i<= List.length; i++)
             {
-                inventory += listitem.name() + "\n "
+                inventory += listItem.name() + "\n "
             }
 
 

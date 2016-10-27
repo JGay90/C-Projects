@@ -110,9 +110,9 @@ namespace WeilandR_HW7_3
         {
             string inventory = "";
 
-            for (int i = 0; i<= List.length; i++)
+            for (int i = 0; i<= player.Inventory.Count; i++)
             {
-                inventory += itemList.name() + "\n "
+                inventory += player.Inventory[i].Name + "\n ";
             }
 
 
@@ -130,7 +130,7 @@ namespace WeilandR_HW7_3
         {
             string quit = "Have a Nice Day";
 
-           //figure out later!
+            
 
             return quit;
         }

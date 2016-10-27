@@ -9,6 +9,8 @@ namespace WeilandR_HW7_3
     class Command : dungeonCrawlForm
     {
         string input;
+        Player player = new Player();
+        World world = new World();
 
         public string Handler(string input)
         {
@@ -82,8 +84,10 @@ namespace WeilandR_HW7_3
         }
         public string Get()
         {
-            string get = "";
+            string get = "you have picked up ";
 
+            get += world.worldList[player.Location].itemList[].Name;
+            
 
 
             return get;

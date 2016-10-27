@@ -144,37 +144,6 @@ namespace WeilandR_HW7_3
             }
         }
 
-        private void pickUpItemButton_Click(object sender, EventArgs e)
-        {
-            Item placeHolder = null;
-
-            foreach (Item val in com.world.worldList[i].itemList)//for each item in the list, check to see if the selected name matches the item's.
-            {
-                if (val.Name == roomItemListBox.SelectedItem.ToString())
-                {
-                    placeHolder = val;
-                }
-                else
-                {
-                    displayTextBox.AppendText("\nPlease select an item to pick up.");
-                    displayTextBox.ScrollToCaret();
-                }
-            }
-            if (placeHolder != null)//If the placeholder has an item, do this.
-            {
-                com.world.worldList[i].itemList.Remove(placeHolder);
-                roomItemListBox.Items.Remove(roomItemListBox.SelectedItem);
-                displayTextBox.AppendText("\nYou pick up the " + placeHolder.Name);
-                com.player.Inventory.Add(placeHolder);
-                playerItemListBox.Items.Add(placeHolder.Name);
-            }
-            else
-            {
-                displayTextBox.AppendText("\nPlease select a real item to pick up.");
-
-            }
-        }
-
         private void useRoomItemButton_Click(object sender, EventArgs e)
         {
 
@@ -234,6 +203,8 @@ namespace WeilandR_HW7_3
             playerExpLabel.Text = com.player.EXP.ToString();
             playerWeaponLabel.Text = com.player.Weapon.Name;
             playerArmorLabel.Text = com.player.Armor.Name;
+            mobPopulation();
+            itemPopulation();
         }
 
         private void submitButton_Click(object sender, EventArgs e)

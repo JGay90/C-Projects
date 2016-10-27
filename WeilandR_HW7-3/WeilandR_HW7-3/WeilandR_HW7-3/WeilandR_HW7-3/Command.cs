@@ -83,9 +83,33 @@ namespace WeilandR_HW7_3
         }
         public string Get()
         {
-            string get = "";
+            string get;
+            Item placeHolder = null;
+            int i = 0;
 
+            foreach (Item val in world.worldList[player.Location].itemList)//for each item in the list, check to see if the selected name matches the item's.
+            {
+                if (val.Name == world.worldList[player.Location].itemList[i].Name)
+                {
+                    placeHolder = val;
+                }
+                else
+                {
+                    get = "\nPlease select an item to pick up.";
 
+                }
+            }
+            if (placeHolder != null)//If the placeholder has an item, do this.
+            {
+                world.worldList[player.Location].itemList.Remove(placeHolder);
+                get = "\nYou pick up the " + placeHolder.Name;
+                player.Inventory.Add(placeHolder);
+            }
+            else
+            {
+                get = "\nPlease select a real item to pick up.";
+
+            }
 
             return get;
         }

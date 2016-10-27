@@ -9,68 +9,66 @@ namespace WeilandR_HW7_3
     class Command : dungeonCrawlForm
     {
         string input;
-        //public will be fine for now.
-        public Player player = new Player();
         public World world = new World();
+        public Player player = new Player();
 
         public string Handler(string input)
         {
-            string handler = "";
-            switch(handler)
+            
+            switch(input)
             {
-                case Go:
-                     
+                case "Go":
+                    input = Go();
                     break;
 
-                case Look:
-
+                case "Look":
+                    input = Look();
                     break;
 
-                case Take:
-
+                case "Take":
+                    input = Take();
                     break;
 
-                case Get:
-
+                case "Get":
+                    input = Get();
                     break;
 
-                case Drop:
-
+                case "Drop":
+                    input = Drop();
                     break;
 
-                case Open:
-
+                case "Open":
+                    input = Open();
                     break;
 
-                case Inventory:
-
+                case "Inventory":
+                    input = Inventory();
                     break;
 
-                case Score:
-
+                case "Score":
+                    input = Score();
                     break;
 
-                case Quit:
-
+                case "Quit":
+                    input = Quit();
                     break;
             }
 
 
-            return handler;
+            return input;
         }
 
         public string Go()
         {
             string go = "";
-
-
+            
 
             return go;
         }
         public string Look()
         {
             string look = "";
-
+            
 
 
             return look;
@@ -85,33 +83,8 @@ namespace WeilandR_HW7_3
         }
         public string Get()
         {
-            string get;
-            Item placeHolder = null;
-            int i = 0;
+            string get = "";
 
-            foreach (Item val in world.worldList[player.Location].itemList)//for each item in the list, check to see if the selected name matches the item's.
-            {
-                if (val.Name == world.worldList[player.Location].itemList[i].Name)
-                {
-                    placeHolder = val;
-                }
-                else
-                {
-                    get = "\nPlease select an item to pick up.";
-                    
-                }
-            }
-            if (placeHolder != null)//If the placeholder has an item, do this.
-            {
-                world.worldList[player.Location].itemList.Remove(placeHolder);
-                get = "\nYou pick up the " + placeHolder.Name;
-                player.Inventory.Add(placeHolder);
-            }
-            else
-            {
-                get = "\nPlease select a real item to pick up.";
-
-            }
 
 
             return get;
@@ -137,9 +110,9 @@ namespace WeilandR_HW7_3
         {
             string inventory = "";
 
-            for (int i = 0; i<= List.lenghth; i++)
+            for (int i = 0; i<= player.Inventory.Count; i++)
             {
-                inventory += listitem.name() + "\n "
+                inventory += player.Inventory[i].Name + "\n ";
             }
 
 
@@ -149,16 +122,15 @@ namespace WeilandR_HW7_3
         {
             string score = "";
 
-           score += Player.getEXP();
+            score += player.EXP;
 
             return score;
         }
         public string Quit()
         {
-            string quit = "Have a Nice Day";
-
-           //figure out later!
-
+            string quit = "Game Over\n" +
+                          "Your score was: " + Score() + "\n" +
+                          "Have a Nice Day";
             return quit;
         }
     }

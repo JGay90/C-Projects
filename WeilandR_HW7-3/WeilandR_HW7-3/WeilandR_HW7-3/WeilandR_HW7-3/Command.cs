@@ -8,7 +8,6 @@ namespace WeilandR_HW7_3
 {
     class Command : dungeonCrawlForm
     {
-        string input;
         public World world = new World();
         public Player player = new Player();
 

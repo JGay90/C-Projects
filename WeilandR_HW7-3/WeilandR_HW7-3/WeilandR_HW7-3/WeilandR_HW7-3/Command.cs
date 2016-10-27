@@ -48,7 +48,7 @@ namespace WeilandR_HW7_3
                     break;
 
                 case Quit:
-                    
+
                     break;
             }
 

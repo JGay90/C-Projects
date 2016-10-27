@@ -489,7 +489,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1265, 477);
+            this.ClientSize = new System.Drawing.Size(1045, 477);
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.commandTextBox);
             this.Controls.Add(this.combatLogGroupbox);

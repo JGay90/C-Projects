@@ -75,3 +75,10 @@ C:\Users\umbre\Source\Repos\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW
 C:\Users\umbre\Source\Repos\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7_3.dungeonCrawlForm.resources
 C:\Users\umbre\Source\Repos\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7_3.Properties.Resources.resources
 C:\Users\umbre\Source\Repos\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7-3.csproj.GenerateResource.Cache
+C:\Users\gayj5385\Source\Repos\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\bin\Debug\WeilandR_HW7-3.exe.config
+C:\Users\gayj5385\Source\Repos\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7-3.exe
+C:\Users\gayj5385\Source\Repos\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7-3.pdb
+C:\Users\gayj5385\Source\Repos\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7-3.csprojResolveAssemblyReference.cache
+C:\Users\gayj5385\Source\Repos\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7_3.dungeonCrawlForm.resources
+C:\Users\gayj5385\Source\Repos\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7_3.Properties.Resources.resources
+C:\Users\gayj5385\Source\Repos\C-Projects\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\WeilandR_HW7-3\obj\Debug\WeilandR_HW7-3.csproj.GenerateResource.Cache

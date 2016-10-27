@@ -6,20 +6,22 @@ using System.Threading.Tasks;
 
 namespace WeilandR_HW7_3
 {
-    class Command
+    class Command : dungeonCrawlForm
     {
         string input;
+        public World world = new World();
+        public Player player = new Player();
 
         public string Handler(string input)
         {
             string handler = "";
             switch(handler)
             {
-                case Go:
-
+                case "Go":
+                     
                     break;
 
-                case Look:
+                case "Look":
 
                     break;
 
@@ -109,6 +111,10 @@ namespace WeilandR_HW7_3
         {
             string inventory = "";
 
+            for (int i = 0; i<= List.lenghth; i++)
+            {
+                inventory += listitem.name() + "\n "
+            }
 
 
             return inventory;
@@ -117,15 +123,15 @@ namespace WeilandR_HW7_3
         {
             string score = "";
 
-
+            score += Player.getEXP();
 
             return score;
         }
         public string Quit()
         {
-            string quit = "";
+            string quit = "Have a Nice Day";
 
-
+           //figure out later!
 
             return quit;
         }

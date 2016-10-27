@@ -14,48 +14,48 @@ namespace WeilandR_HW7_3
 
         public string Handler(string input)
         {
-            string handler = "";
-            switch(handler)
+            
+            switch(input)
             {
                 case "Go":
-                     
+                    input = Go();
                     break;
 
                 case "Look":
-
+                    input = Look();
                     break;
 
                 case "Take":
-
+                    input = Take();
                     break;
 
                 case "Get":
-
+                    input = Get();
                     break;
 
                 case "Drop":
-
+                    input = Drop();
                     break;
 
                 case "Open":
-
+                    input = Open();
                     break;
 
                 case "Inventory":
-
+                    input = Inventory();
                     break;
 
                 case "Score":
-
+                    input = Score();
                     break;
 
                 case "Quit":
-
+                    input = Quit();
                     break;
             }
 
 
-            return handler;
+            return input;
         }
 
         public string Go()
@@ -128,10 +128,9 @@ namespace WeilandR_HW7_3
         }
         public string Quit()
         {
-            string quit = "Have a Nice Day";
-
-            
-
+            string quit = "Game Over\n" +
+                          "Your score was: " + Score() + "\n" +
+                          "Have a Nice Day";
             return quit;
         }
     }

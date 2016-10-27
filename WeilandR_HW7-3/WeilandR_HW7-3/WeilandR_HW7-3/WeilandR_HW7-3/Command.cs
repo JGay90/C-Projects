@@ -112,7 +112,7 @@ namespace WeilandR_HW7_3
 
             for (int i = 0; i<= List.length; i++)
             {
-                inventory += listItem.name() + "\n "
+                inventory += itemList.name() + "\n "
             }
 
 
@@ -122,7 +122,7 @@ namespace WeilandR_HW7_3
         {
             string score = "";
 
-            score += Player.getEXP();
+            score += player.EXP;
 
             return score;
         }

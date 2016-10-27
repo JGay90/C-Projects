@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WeilandR_HW7_3
 {
-    class Command
+    class Command : dungeonCrawlForm
     {
         string input;
 
@@ -16,7 +16,7 @@ namespace WeilandR_HW7_3
             switch(handler)
             {
                 case Go:
-
+                     
                     break;
 
                 case Look:
@@ -109,6 +109,10 @@ namespace WeilandR_HW7_3
         {
             string inventory = "";
 
+            for (int i = 0; i<= List.lenghth; i++)
+            {
+                inventory += listitem.name() + "\n "
+            }
 
 
             return inventory;
@@ -117,15 +121,15 @@ namespace WeilandR_HW7_3
         {
             string score = "";
 
-
+            score += Player.getEXP();
 
             return score;
         }
         public string Quit()
         {
-            string quit = "";
+            string quit = "Have a Nice Day";
 
-
+           //figure out later!
 
             return quit;
         }

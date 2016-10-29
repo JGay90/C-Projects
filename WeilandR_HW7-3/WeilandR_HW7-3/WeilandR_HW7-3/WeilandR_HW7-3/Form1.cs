@@ -85,32 +85,6 @@ namespace WeilandR_HW7_3
             displayTextBox.ScrollToCaret();
         }
 
-        private void forwardButton_Click(object sender, EventArgs e)
-        {
-            if (i == 9)
-            {
-                MessageBox.Show("You are at the end of the " +
-                    "dungeon. You can go no further.");
-            }
-            else
-            {
-                if (com.world.worldList[i].mobList.Count == 0)
-                {
-                    i++;
-                    roomNameLabel.Text = com.world.worldList[i].rName;
-                    mobPopulation();
-                    itemPopulation();
-                    com.player.Location++;
-                }
-                else
-                {
-                    displayTextBox.AppendText("\nThe monster blocks your path.");
-                }
-            }
-            displayTextBox.ScrollToCaret();
-
-        }
-
         private void backButton_Click(object sender, EventArgs e)
         {
             if (i == 0)

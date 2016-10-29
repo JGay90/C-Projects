@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace WeilandR_HW7_3
 {
@@ -23,15 +24,20 @@ namespace WeilandR_HW7_3
             cleanupInput = input.Trim();//trim the white space off the input
 
             //Split the line at delimiters, removing the empty entries.
-             placeholder = cleanupInput.Split(delim, StringSplitOptions.RemoveEmptyEntries);//split the string into the string array by the delimiter, remove empty entries.
+             placeholder = cleanupInput.Split(delim, StringSplitOptions.RemoveEmptyEntries);//split the string into the string array by the delimiter, remove empty entries
 
             if (placeholder.Length == 2)
             {
 
+                verb = placeholder[0];
+                action = placeholder[1];
+                Console.WriteLine(verb);
+                Console.WriteLine(action);
+
                 switch (input)
                 {
                     case "Go":
-                        post = Go();
+                        post = Go(action);
                         break;
 
                     case "Look":
@@ -39,19 +45,19 @@ namespace WeilandR_HW7_3
                         break;
 
                     case "Take":
-                        post = Take();
+                        post = Take(action);
                         break;
 
                     case "Get":
-                        post = Get();
+                        post = Get(action);
                         break;
 
                     case "Drop":
-                        post = Drop();
+                        post = Drop(action);
                         break;
 
                     case "Open":
-                        post = Open();
+                        post = Open(action);
                         break;
 
                     case "Inventory":
@@ -79,9 +85,26 @@ namespace WeilandR_HW7_3
         public string Go()
         {
             string go = "";
-            
 
-            return go;
+            if (this.world.worldList[player.Location].RID == 9)
+            {
+                MessageBox.Show("You are at the end of the " +
+                    "dungeon. You can go no further.");
+            }
+            else
+            {
+                if (world.worldList[player.Location].mobList.Count == 0)
+                {
+                    player.Location++;
+                    Look();
+                }
+                else
+                {
+                    go = "\nThe monster blocks your path.";
+                }
+            }
+
+                return go;
         }
         public string Look()
         {

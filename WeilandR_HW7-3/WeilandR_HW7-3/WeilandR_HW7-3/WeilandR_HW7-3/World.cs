@@ -48,12 +48,15 @@ namespace WeilandR_HW7_3
             Weapon dagger = new Weapon();
             Weapon staff = new Weapon();
             Treasure gold = new Treasure();
+            string[] placeHolder;
 
 
             //Room 1 stuff
             room1.RID = 1;
             room1.rName = "Entrance";
             healpotion.Name = "Potion of Healing";
+            placeHolder = new string[] {"potionofhealing", "potion", "healingpotion", "potion of healing", "healing potion"};
+            healpotion.accessName.AddRange(placeHolder);
             healpotion.Effect = "Heal1";
             room1.itemList.Add(healpotion);
             room1.exitList.Add("Placeholder");
@@ -64,6 +67,8 @@ namespace WeilandR_HW7_3
             room2.rName = "Dark Room";
             wolf.Name = "Wolf";
             room2.mobList.Add(wolf);
+            placeHolder = new string[] { "potionofironskin", "potion", "ironskinpotion", "potion of ironskin", "ironskin potion" };
+            defpotion.accessName.AddRange(placeHolder);
             defpotion.Name = "Ironskin Potion";
             defpotion.Effect = "Def1";
             room2.itemList.Add(defpotion);

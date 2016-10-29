@@ -9,12 +9,14 @@ namespace WeilandR_HW7_3
     public class Item
     {
         public string Name { get; set; }
+        public List<string> accessName;
         public int Value { get; set; }
         public string Effect { get; set; }
         public int durability { get; set; }
         public Item()
         {
             Name = "You didn't give me anything";
+            accessName = new List<string>();
             Value = 0;
             Effect = "None";
             durability = 1;

@@ -112,7 +112,12 @@ namespace WeilandR_HW7_3
         private void itemPopulation()
         {
             roomItemListBox.Items.Clear();
+            playerItemListBox.Items.Clear();
             foreach (Item val in com.world.worldList[i].itemList)
+            {
+                roomItemListBox.Items.Add(val.Name);
+            }
+            foreach(Item val in com.player.Inventory)
             {
                 roomItemListBox.Items.Add(val.Name);
             }

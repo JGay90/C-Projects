@@ -21,7 +21,7 @@ namespace WeilandR_HW7_3
             string post = "Try again?";//This will be for holding the output.
             char[] delim = { ' ', ',', '.', '!', '?' };//this is here to be a delimiter for when I separate words.
 
-            cleanupInput = input.Trim();//trim the white space off the input
+            cleanupInput = input.Trim().ToLower();//trim the white space off the input
 
             //Split the line at delimiters, removing the empty entries.
              placeholder = cleanupInput.Split(delim, StringSplitOptions.RemoveEmptyEntries);//split the string into the string array by the delimiter, remove empty entries
@@ -53,11 +53,11 @@ namespace WeilandR_HW7_3
                         break;
 
                     case "Drop":
-                        post = Drop(action);
+                        //post = Drop(action);
                         break;
 
                     case "Open":
-                        post = Open(action);
+                       // post = Open(action);
                         break;
 
                     case "Inventory":
@@ -82,27 +82,38 @@ namespace WeilandR_HW7_3
             return post;
         }
 
-        public string Go()
+        public string Go(string direction)
         {
             string go = "";
 
-            if (this.world.worldList[player.Location].RID == 9)
+
+            if (world.worldList[player.Location].mobList.Count == 0)
             {
-                MessageBox.Show("You are at the end of the " +
-                    "dungeon. You can go no further.");
+                if (direction == "ahead")
+                {
+                    if (this.world.worldList[player.Location].RID == 9)
+                    {
+                        MessageBox.Show("You are at the end of the " +
+                          "dungeon. You can go no further.");
+                    }
+                    else
+                    {
+                        player.Location++;
+                        Look();
+                    }
+                }
+                else if (direction == "back")
+                {
+                    player.Location--;
+                    Look();
+                }
+
             }
             else
             {
-                if (world.worldList[player.Location].mobList.Count == 0)
-                {
-                    player.Location++;
-                    Look();
-                }
-                else
-                {
-                    go = "\nThe monster blocks your path.";
-                }
+                go = "\nThe monster blocks your path.";
             }
+            
 
                 return go;
         }
@@ -114,11 +125,11 @@ namespace WeilandR_HW7_3
 
             return look;
         }
-        public string Take()
+        public string Take(string name)
         {
             string take = "";
 
-
+            take = Get(name);
 
             return take;
         }
@@ -130,9 +141,10 @@ namespace WeilandR_HW7_3
 
             foreach (Item val in world.worldList[player.Location].itemList)//for each item in the list, check to see if the selected name matches the item's.
             {
-                if (val.Name == Name)
+                if (val.accessName.Contains(Name))
                 {
                     placeHolder = val;
+                    break;
                 }
                 else
                 {
@@ -142,9 +154,9 @@ namespace WeilandR_HW7_3
             }
             if (placeHolder != null)//If the placeholder has an item, do this.
             {
+                player.Inventory.Add(placeHolder);
                 world.worldList[player.Location].itemList.Remove(placeHolder);
                 get = "\nYou pick up the " + placeHolder.Name;
-                player.Inventory.Add(placeHolder);
             }
             else
             {

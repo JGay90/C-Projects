@@ -6,55 +6,74 @@ using System.Threading.Tasks;
 
 namespace WeilandR_HW7_3
 {
-    class Command : dungeonCrawlForm
+    class Command
     {
         public World world = new World();
         public Player player = new Player();
 
         public string Handler(string input)
         {
-            
-            switch(input)
+            string[] placeholder;//this is the array the string segments should be going into.
+            string cleanupInput;//this will be the placeholder for cleaning up the input and just taking the input in general.
+            string verb;//This will be the placeholder to determine the verb.
+            string action;//This will be the placeholder to determine the action.
+            string post = "Try again?";//This will be for holding the output.
+            char[] delim = { ' ', ',', '.', '!', '?' };//this is here to be a delimiter for when I separate words.
+
+            cleanupInput = input.Trim();//trim the white space off the input
+
+            //Split the line at delimiters, removing the empty entries.
+             placeholder = cleanupInput.Split(delim, StringSplitOptions.RemoveEmptyEntries);//split the string into the string array by the delimiter, remove empty entries.
+
+            if (placeholder.Length == 2)
             {
-                case "Go":
-                    input = Go();
-                    break;
 
-                case "Look":
-                    input = Look();
-                    break;
+                switch (input)
+                {
+                    case "Go":
+                        post = Go();
+                        break;
 
-                case "Take":
-                    input = Take();
-                    break;
+                    case "Look":
+                        post = Look();
+                        break;
 
-                case "Get":
-                    input = Get();
-                    break;
+                    case "Take":
+                        post = Take();
+                        break;
 
-                case "Drop":
-                    input = Drop();
-                    break;
+                    case "Get":
+                        post = Get();
+                        break;
 
-                case "Open":
-                    input = Open();
-                    break;
+                    case "Drop":
+                        post = Drop();
+                        break;
 
-                case "Inventory":
-                    input = Inventory();
-                    break;
+                    case "Open":
+                        post = Open();
+                        break;
 
-                case "Score":
-                    input = Score();
-                    break;
+                    case "Inventory":
+                        post = Inventory();
+                        break;
 
-                case "Quit":
-                    input = Quit();
-                    break;
+                    case "Score":
+                        post = Score();
+                        break;
+
+                    case "Quit":
+                        post = Quit();
+                        break;
+                }
+            }
+            else
+            {
+                post = "Invalid command. Try again?";
             }
 
 
-            return input;
+            return post;
         }
 
         public string Go()
@@ -80,7 +99,7 @@ namespace WeilandR_HW7_3
 
             return take;
         }
-        public string Get()
+        public string Get(string Name)
         {
             string get;
             Item placeHolder = null;
@@ -88,7 +107,7 @@ namespace WeilandR_HW7_3
 
             foreach (Item val in world.worldList[player.Location].itemList)//for each item in the list, check to see if the selected name matches the item's.
             {
-                if (val.Name == world.worldList[player.Location].itemList[i].Name)
+                if (val.Name == Name)
                 {
                     placeHolder = val;
                 }

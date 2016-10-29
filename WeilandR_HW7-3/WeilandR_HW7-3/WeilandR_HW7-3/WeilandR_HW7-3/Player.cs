@@ -16,7 +16,7 @@ namespace WeilandR_HW7_3
         public int EXP { get; set; }
         public Weapon Weapon { get; set; }
         public Armor Armor { get; set; }
-        public List<Item> Inventory = new List<Item>();
+        public List<Item> Inventory;
         public int Location { get; set; }
 
         List<Item> playerItems = new List<Item>();
@@ -30,6 +30,7 @@ namespace WeilandR_HW7_3
             Location = 0;
             Weapon = new Weapon();
             Armor = new Armor();
+            Inventory = new List<Item>();
             Weapon.Name = "Wooden Stick";
             Weapon.attackValue = 1;
             Armor.Name = "Tattered Shirt";

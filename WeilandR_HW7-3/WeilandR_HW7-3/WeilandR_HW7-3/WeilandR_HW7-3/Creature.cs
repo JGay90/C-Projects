@@ -18,6 +18,7 @@ namespace WeilandR_HW7_3
         public int Lvl { get; set; }
         public int Exp { get; set; }
         public bool isdead { get; set; }
+        public List<Item> mobInventory;
         //public Image i { get; set; }
 
         /**
@@ -31,6 +32,7 @@ namespace WeilandR_HW7_3
 
         public Creature()
         {
+            mobInventory = new List<Item>();
             Name = "You didn't populate the bestiary";
             Desc = "You should go do that now.";
             HP = 10;

@@ -13,17 +13,18 @@ namespace WeilandR_HW7_3
         public string rName { get; set; }
         public string rDesc { get; set; }
 
-        public List<Creature> mobList = new List<Creature>();
+        public List<Creature> mobList;
 
-        public List<Item> itemList = new List<Item>();
+        public List<Item> itemList;
 
-        public List<string> exitList = new List<string>();
-
-        private int roomID = 0;
+        public List<string> exitList;
 
         public Room()
         {
-            RID = roomID;
+            mobList = new List<Creature>();
+            itemList = new List<Item>();
+            exitList = new List<string>();
+            RID = -1;
             rName = "Bob";
             rDesc = "Instantiate me properly!";
         }
@@ -39,9 +40,9 @@ namespace WeilandR_HW7_3
             }
             for(int i = 0; i < mobList.Count; i++)
             {
-                if (mobList[i].isdead == true)
+                if (this.mobList[i].isdead == true)
                 {
-                    mobList.RemoveAt(i);
+                    this.mobList.RemoveAt(i);
                 }
             }
         }

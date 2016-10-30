@@ -21,6 +21,7 @@ namespace WeilandR_HW7_3
             roomNameLabel.Text = com.world.worldList[0].rName;
             mobPopulation();
             itemPopulation();
+            Instructions();
         }
 
         //private void attackMobButton_Click(object sender, EventArgs e)
@@ -84,22 +85,14 @@ namespace WeilandR_HW7_3
         //    displayTextBox.ScrollToCaret();
         //}
 
-        //private void backButton_Click(object sender, EventArgs e)
-        //{
-        //    if (i == 0)
-        //    {
-        //        MessageBox.Show("You are at the beginning of the " +
-        //            "dungeon. You can go no further.");
-        //    }
-        //    else
-        //    {
-        //        i--;
-        //        roomNameLabel.Text = com.world.worldList[i].rName;
-        //        mobPopulation();
-        //        itemPopulation();
-        //        com.player.Location--;
-        //    }
-        //}
+        private void Instructions()
+        {
+            displayTextBox.AppendText("Instructions:");
+            displayTextBox.AppendText("\n'Go Ahead' or 'Go Back' to move ahead or back.");
+            com.Look();
+
+        }
+        
         private void mobPopulation()
         {
             mobListBox.Items.Clear();

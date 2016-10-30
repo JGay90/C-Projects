@@ -241,9 +241,16 @@ namespace WeilandR_HW7_3
         {
             string inventory = "";
 
-            for (int i = 0; i<= player.Inventory.Count; i++)
+            if(player.Inventory.Count != 0)
             {
-                inventory += player.Inventory[i].Name + "\n ";
+                foreach (Item val in player.Inventory)
+                {
+                    inventory += "\n " + val.Name;
+                }
+            }
+            else
+            {
+                inventory = "\nYou have nothing in your inventory";
             }
 
 

@@ -111,7 +111,7 @@ namespace WeilandR_HW7_3
             }
             foreach(Item val in com.player.Inventory)
             {
-                roomItemListBox.Items.Add(val.Name);
+                playerItemListBox.Items.Add(val.Name);
             }
         }
 

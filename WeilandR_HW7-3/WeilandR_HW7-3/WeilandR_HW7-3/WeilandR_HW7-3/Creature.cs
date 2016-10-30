@@ -10,6 +10,7 @@ namespace WeilandR_HW7_3
     public class Creature
     {
         public string Name { get; set; }
+        public List<string> accessName;
         public string Desc { get; set; }
         public int HP { get; set; }
         public int AC { get; set; }
@@ -33,8 +34,9 @@ namespace WeilandR_HW7_3
         public Creature()
         {
             mobInventory = new List<Item>();
-            Name = "You didn't populate the bestiary";
-            Desc = "You should go do that now.";
+            accessName = new List<string>();
+            Name = "Tom";
+            Desc = "Tom is upset. Tome notices that you're using the default constructor rather than actually giving a proper description to him. You should go do that now.";
             HP = 10;
             AC = 0;
             ATK = 0;

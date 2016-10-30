@@ -77,6 +77,7 @@ namespace WeilandR_HW7_3
             defpotion.Effect = "Def1";
             room2.itemList.Add(defpotion);
             sword.Name = "Sword";
+            sword.accessName.Add("sword");
             room2.itemList.Add(sword);
             room2.exitList.Add("Placeholder");
             worldList.Add(room2);
@@ -89,6 +90,8 @@ namespace WeilandR_HW7_3
             skeleton.Name = "Skeleton";
             room3.mobList.Add(skeleton);
             atkpotion.Name = "Strength Potion";
+            placeHolder = new string[] { "potionofstrength", "potion", "strengthpotion", "potion of strength", "strength potion" };
+            atkpotion.accessName.AddRange(placeHolder);
             atkpotion.Effect = "Atk1";
             room3.itemList.Add(atkpotion);
             room3.exitList.Add("Placeholder");
@@ -104,6 +107,7 @@ namespace WeilandR_HW7_3
             room4.mobList.Add(goblin3);
             room4.mobList.Add(goblin4);
             staff.Name = "Staff";
+            staff.accessName.Add("staff");
             room4.itemList.Add(staff);
             room4.exitList.Add("Placeholder");
             worldList.Add(room4);
@@ -118,6 +122,7 @@ namespace WeilandR_HW7_3
             room5.mobList.Add(goblin6);
             room5.mobList.Add(goblin7);
             dagger.Name = "Dagger";
+            dagger.accessName.Add("dagger");
             room5.itemList.Add(dagger);
             room5.exitList.Add("Placeholder");
             worldList.Add(room5);
@@ -155,6 +160,7 @@ namespace WeilandR_HW7_3
             room10.rName = "Dragon Nest";
             dragon.Name = "Dragon";
             room10.mobList.Add(dragon);
+            gold.accessName.Add("gold");
             room10.itemList.Add(gold);
             room10.exitList.Add("Placeholder");
             worldList.Add(room10);

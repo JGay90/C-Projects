@@ -78,11 +78,11 @@ namespace WeilandR_HW7_3
                         break;
 
                     case "drop":
-                        //post = Drop(action);
+                        post = Drop(action);
                         break;
 
                     case "open":
-                       // post = Open(action);
+                        //post = Open(action);
                         break;
                 }
             }
@@ -181,7 +181,7 @@ namespace WeilandR_HW7_3
         }
         public string Take(string name)
         {
-            string take = "";
+            string take;
 
             take = Get(name);
 
@@ -191,9 +191,9 @@ namespace WeilandR_HW7_3
         {
             string get;
             Item placeHolder = null;
-            int i = 0;
 
-            foreach (Item val in world.worldList[player.Location].itemList)//for each item in the list, check to see if the selected name matches the item's.
+            //for each item in the list, check to see if the selected name matches the item's.
+            foreach (Item val in world.worldList[player.Location].itemList)
             {
                 if (val.accessName.Contains(Name))
                 {
@@ -221,10 +221,36 @@ namespace WeilandR_HW7_3
             return get;
         }
         
-        public string Drop()
+        public string Drop(string Name)
         {
             string drop = "";
+            Item placeHolder = null;
 
+            //for each item in the list, check to see if the selected name matches the item's.
+            foreach (Item val in player.Inventory)
+            {
+                if (val.accessName.Contains(Name))
+                {
+                    placeHolder = val;
+                    break;
+                }
+                else
+                {
+                    drop = "\nPlease select an item in your inventory to drop.";
+
+                }
+            }
+            if (placeHolder != null)//If the placeholder has an item, do this.
+            {
+                world.worldList[player.Location].itemList.Add(placeHolder);
+                player.Inventory.Remove(placeHolder);
+                drop = "\nYou pick up the " + placeHolder.Name;
+            }
+            else
+            {
+                drop = "\nPlease select a real item to pick up.";
+
+            }
 
 
             return drop;

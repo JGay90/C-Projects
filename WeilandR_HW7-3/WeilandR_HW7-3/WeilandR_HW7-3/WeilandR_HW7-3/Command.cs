@@ -102,7 +102,7 @@ namespace WeilandR_HW7_3
 
             playerMoved = roomList(direction, world.worldList[player.Location].RID);
 
-            if (playerMoved)
+            if (playerMoved == true)
             {
                 go = "You move to the " + direction + ".";
                 Look();
@@ -274,7 +274,7 @@ namespace WeilandR_HW7_3
         {
             bool playerMoved = false;
 
-            if (dir == "North")
+            if (dir == "north")
             {
                 switch (roomID)
                 {
@@ -360,7 +360,7 @@ namespace WeilandR_HW7_3
                         break;
                 }
             }
-            else if (dir == "East")
+            else if (dir == "east")
             {
                 switch (roomID)
                 {
@@ -479,7 +479,7 @@ namespace WeilandR_HW7_3
 
                 }
             }
-            else if (dir == "West")
+            else if (dir == "west")
             {
                 switch (roomID)
                 {
@@ -613,7 +613,7 @@ namespace WeilandR_HW7_3
                         break;
                 }
             }
-            else if (dir == "South")
+            else if (dir == "south")
             {
                 switch (roomID)
                 {
@@ -699,7 +699,7 @@ namespace WeilandR_HW7_3
                         break;
                 }
             }
-            else if (dir == "NorthWest")
+            else if (dir == "northwest")
             {
                 switch (roomID)
                 {
@@ -730,7 +730,7 @@ namespace WeilandR_HW7_3
                 }
             }
 
-            else if (dir == "NorthEast")
+            else if (dir == "northeast")
             {
                 switch (roomID)
                 {
@@ -777,7 +777,7 @@ namespace WeilandR_HW7_3
                 }
             }
 
-            else if (dir == "SouthWest")
+            else if (dir == "southwest")
             {
                 switch (roomID)
                 {
@@ -825,7 +825,7 @@ namespace WeilandR_HW7_3
                 }
             }
 
-            else if (dir == "SouthEast")
+            else if (dir == "southeast")
             {
                 switch (roomID)
                 {

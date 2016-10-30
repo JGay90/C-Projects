@@ -105,6 +105,7 @@ namespace WeilandR_HW7_3
             if (playerMoved)
             {
                 go = "You move to the " + direction + ".";
+                Look();
             }
             else
             {

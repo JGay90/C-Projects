@@ -214,6 +214,56 @@ namespace WeilandR_HW7_3
             room10.itemList.Add(gold);
             room10.exitList.Add("Placeholder");
             worldList.Add(room10);
+
+
+            room11.RID = 11;
+            room12.RID = 12;
+            room13.RID = 13;
+            room14.RID = 14;
+            room15.RID = 15;
+            room16.RID = 16;
+            room17.RID = 17;
+            room18.RID = 18;
+            room19.RID = 19;
+            room20.RID = 20;
+            room21.RID = 21;
+            room22.RID = 22;
+            room23.RID = 23;
+            room24.RID = 24;
+            room25.RID = 25;
+            room26.RID = 26;
+            room27.RID = 27;
+            room28.RID = 28;
+            room1.RID = 1;
+            room1.RID = 1;
+            room1.RID = 1;
+            room1.RID = 1;
+            room1.RID = 1;
+            room1.RID = 1;
+            room1.RID = 1;
+            room1.RID = 1;
+            room1.RID = 1;
+            room1.RID = 1;
+            room1.RID = 1;
+            room1.RID = 1;
+            room1.RID = 1;
+            room1.RID = 1;
+            room1.RID = 1;
+            room1.RID = 1;
+            room1.RID = 1;
+            room1.RID = 1;
+            room1.RID = 1;
+            room1.RID = 1;
+            room1.RID = 1;
+            room1.RID = 1;
+            room1.RID = 1;
+            room1.RID = 1;
+            room1.RID = 1;
+            room1.RID = 1;
+
+
+
+
         }
         public void RemoveMonster()
         {

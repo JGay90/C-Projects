@@ -98,8 +98,18 @@ namespace WeilandR_HW7_3
         public string Go(string direction)
         {
             string go = "";
+            bool playerMoved;
 
-            roomList(direction, world.worldList[player.Location].RID);
+            playerMoved = roomList(direction, world.worldList[player.Location].RID);
+
+            if (playerMoved)
+            {
+                go = "You move to the " + direction + ".";
+            }
+            else
+            {
+                go = "You can't move to the " + direction + ".";
+            }
 
 
             return go;
@@ -259,71 +269,93 @@ namespace WeilandR_HW7_3
             return quit;
         }
 
-        public void roomList(string dir, int roomID)
+        public bool roomList(string dir, int roomID)
         {
+            bool playerMoved = false;
+
             if (dir == "North")
             {
                 switch (roomID)
                 {
                     case 0:
                         player.Location = 2;
+                        playerMoved = true;
                         break;
                     case 2:
                         player.Location = 7;
+                        playerMoved = true;
                         break;
                     case 8:
                         player.Location = 3;
+                        playerMoved = true;
                         break;
                     case 9:
                         player.Location = 10;
+                        playerMoved = true;
                         break;
                     case 10:
                         player.Location = 11;
+                        playerMoved = true;
                         break;
                     case 15:
                         player.Location = 17;
+                        playerMoved = true;
                         break;
                     case 17:
                         player.Location = 20;
+                        playerMoved = true;
                         break;
                     case 19:
                         player.Location = 18;
+                        playerMoved = true;
                         break;
                     case 24:
                         player.Location = 25;
+                        playerMoved = true;
                         break;
                     case 29:
                         player.Location = 26;
+                        playerMoved = true;
                         break;
                     case 32:
                         player.Location = 33;
+                        playerMoved = true;
                         break;
                     case 36:
                         player.Location = 37;
+                        playerMoved = true;
                         break;
                     case 38:
                         player.Location = 39;
+                        playerMoved = true;
                         break;
                     case 41:
                         player.Location = 32;
+                        playerMoved = true;
                         break;
                     case 42:
                         player.Location = 41;
+                        playerMoved = true;
                         break;
                     case 45:
                         player.Location = 43;
+                        playerMoved = true;
                         break;
                     case 46:
                         player.Location = 44;
+                        playerMoved = true;
                         break;
                     case 47:
                         player.Location = 46;
+                        playerMoved = true;
                         break;
                     case 52:
                         player.Location = 50;
+                        playerMoved = true;
                         break;
                     case 55:
                         player.Location = 54;
+                        playerMoved = true;
                         break;
                 }
             }
@@ -333,87 +365,115 @@ namespace WeilandR_HW7_3
                 {
                     case 0:
                         player.Location = 3;
+                        playerMoved = true;
                         break;
                     case 1:
                         player.Location = 0;
+                        playerMoved = true;
                         break;
                     case 2:
                         player.Location = 4;
+                        playerMoved = true;
                         break;
                     case 4:
                         player.Location = 5;
+                        playerMoved = true;
                         break;
                     case 6:
                         player.Location = 1;
+                        playerMoved = true;
                         break;
                     case 7:
                         player.Location = 9;
+                        playerMoved = true;
                         break;
                     case 10:
                         player.Location = 31;
+                        playerMoved = true;
                         break;
                     case 11:
                         player.Location = 12;
+                        playerMoved = true;
                         break;
                     case 12:
                         player.Location = 13;
+                        playerMoved = true;
                         break;
                     case 13:
                         player.Location = 15;
+                        playerMoved = true;
                         break;
                     case 14:
                         player.Location = 17;
+                        playerMoved = true;
                         break;
                     case 17:
                         player.Location = 16;
+                        playerMoved = true;
                         break;
                     case 16:
                         player.Location = 18;
+                        playerMoved = true;
                         break;
                     case 19:
                         player.Location = 20;
+                        playerMoved = true;
                         break;
                     case 23:
                         player.Location = 10;
+                        playerMoved = true;
                         break;
                     case 24:
                         player.Location = 23;
+                        playerMoved = true;
                         break;
                     case 25:
                         player.Location = 26;
+                        playerMoved = true;
                         break;
                     case 27:
                         player.Location = 24;
+                        playerMoved = true;
                         break;
                     case 28:
                         player.Location = 30;
+                        playerMoved = true;
                         break;
                     case 31:
                         player.Location = 32;
+                        playerMoved = true;
                         break;
                     case 37:
                         player.Location = 38;
+                        playerMoved = true;
                         break;
                     case 40:
                         player.Location = 39;
+                        playerMoved = true;
                         break;
                     case 42:
                         player.Location = 43;
+                        playerMoved = true;
                         break;
                     case 43:
                         player.Location = 44;
+                        playerMoved = true;
                         break;
                     case 48:
                         player.Location = 49;
+                        playerMoved = true;
                         break;
                     case 51:
                         player.Location = 50;
+                        playerMoved = true;
                         break;
                     case 53:
                         player.Location = 48;
+                        playerMoved = true;
                         break;
                     case 54:
                         player.Location = 53;
+                        playerMoved = true;
                         break;
 
                 }
@@ -424,99 +484,131 @@ namespace WeilandR_HW7_3
                 {
                     case 0:
                         player.Location = 1;
+                        playerMoved = true;
                         break;
                     case 1:
                         player.Location = 6;
+                        playerMoved = true;
                         break;
                     case 3:
                         player.Location = 0;
+                        playerMoved = true;
                         break;
                     case 4:
                         player.Location = 2;
+                        playerMoved = true;
                         break;
                     case 5:
                         player.Location = 4;
+                        playerMoved = true;
                         break;
                     case 9:
                         player.Location = 7;
+                        playerMoved = true;
                         break;
                     case 10:
                         player.Location = 23;
+                        playerMoved = true;
                         break;
                     case 12:
                         player.Location = 11;
+                        playerMoved = true;
                         break;
                     case 13:
                         player.Location = 12;
+                        playerMoved = true;
                         break;
                     case 15:
                         player.Location = 13;
+                        playerMoved = true;
                         break;
                     case 16:
                         player.Location = 17;
+                        playerMoved = true;
                         break;
                     case 17:
                         player.Location = 14;
+                        playerMoved = true;
                         break;
                     case 18:
                         player.Location = 16;
+                        playerMoved = true;
                         break;
                     case 20:
                         player.Location = 11;
+                        playerMoved = true;
                         break;
                     case 23:
                         player.Location = 24;
+                        playerMoved = true;
                         break;
                     case 24:
                         player.Location = 27;
+                        playerMoved = true;
                         break;
                     case 25:
                         player.Location = 27;
+                        playerMoved = true;
                         break;
                     case 26:
                         player.Location = 25;
+                        playerMoved = true;
                         break;
                     case 27:
                         player.Location = 55;
+                        playerMoved = true;
                         break;
                     case 30:
                         player.Location = 28;
+                        playerMoved = true;
                         break;
                     case 31:
                         player.Location = 10;
+                        playerMoved = true;
                         break;
                     case 32:
                         player.Location = 31;
+                        playerMoved = true;
                         break;
                     case 38:
                         player.Location = 37;
+                        playerMoved = true;
                         break;
                     case 39:
                         player.Location = 40;
+                        playerMoved = true;
                         break;
                     case 40:
                         player.Location = 36;
+                        playerMoved = true;
                         break;
                     case 41:
                         player.Location = 54;
+                        playerMoved = true;
                         break;
                     case 43:
                         player.Location = 42;
+                        playerMoved = true;
                         break;
                     case 44:
                         player.Location = 43;
+                        playerMoved = true;
                         break;
                     case 48:
                         player.Location = 53;
+                        playerMoved = true;
                         break;
                     case 49:
                         player.Location = 48;
+                        playerMoved = true;
                         break;
                     case 50:
                         player.Location = 51;
+                        playerMoved = true;
                         break;
                     case 53:
                         player.Location = 54;
+                        playerMoved = true;
                         break;
                 }
             }
@@ -526,63 +618,83 @@ namespace WeilandR_HW7_3
                 {
                     case 2:
                         player.Location = 0;
+                        playerMoved = true;
                         break;
                     case 3:
                         player.Location = 8;
+                        playerMoved = true;
                         break;
                     case 7:
                         player.Location = 2;
+                        playerMoved = true;
                         break;
                     case 10:
                         player.Location = 9;
+                        playerMoved = true;
                         break;
                     case 11:
                         player.Location = 10;
+                        playerMoved = true;
                         break;
                     case 18:
                         player.Location = 19;
+                        playerMoved = true;
                         break;
                     case 20:
                         player.Location = 17;
+                        playerMoved = true;
                         break;
                     case 25:
                         player.Location = 24;
+                        playerMoved = true;
                         break;
                     case 26:
                         player.Location = 29;
+                        playerMoved = true;
                         break;
                     case 32:
                         player.Location = 41;
+                        playerMoved = true;
                         break;
                     case 33:
                         player.Location = 32;
+                        playerMoved = true;
                         break;
                     case 37:
                         player.Location = 36;
+                        playerMoved = true;
                         break;
                     case 39:
                         player.Location = 38;
+                        playerMoved = true;
                         break;
                     case 41:
                         player.Location = 42;
+                        playerMoved = true;
                         break;
                     case 43:
                         player.Location = 45;
+                        playerMoved = true;
                         break;
                     case 44:
                         player.Location = 46;
+                        playerMoved = true;
                         break;
                     case 46:
                         player.Location = 47;
+                        playerMoved = true;
                         break;
                     case 50:
                         player.Location = 52;
+                        playerMoved = true;
                         break;
                     case 54:
                         player.Location = 55;
+                        playerMoved = true;
                         break;
                     case 55:
                         player.Location = 27;
+                        playerMoved = true;
                         break;
                 }
             }
@@ -592,21 +704,27 @@ namespace WeilandR_HW7_3
                 {
                     case 17:
                         player.Location = 17;
+                        playerMoved = true;
                         break;
                     case 25:
                         player.Location = 28;
+                        playerMoved = true;
                         break;
                     case 33:
                         player.Location = 35;
+                        playerMoved = true;
                         break;
                     case 38:
                         player.Location = 40;
+                        playerMoved = true;
                         break;
                     case 49:
                         player.Location = 47;
+                        playerMoved = true;
                         break;
                     case 50:
                         player.Location = 48;
+                        playerMoved = true;
                         break;
                 }
             }
@@ -617,33 +735,43 @@ namespace WeilandR_HW7_3
                 {
                     case 1:
                         player.Location = 2;
+                        playerMoved = true;
                         break;
                     case 2:
                         player.Location = 9;
+                        playerMoved = true;
                         break;
                     case 12:
                         player.Location = 14;
+                        playerMoved = true;
                         break;
                     case 13:
                         player.Location = 27;
+                        playerMoved = true;
                         break;
                     case 21:
                         player.Location = 19;
+                        playerMoved = true;
                         break;
                     case 35:
                         player.Location = 36;
+                        playerMoved = true;
                         break;
                     case 33:
                         player.Location = 34;
+                        playerMoved = true;
                         break;
                     case 37:
                         player.Location = 39;
+                        playerMoved = true;
                         break;
                     case 48:
                         player.Location = 47;
+                        playerMoved = true;
                         break;
                     case 50:
                         player.Location = 49;
+                        playerMoved = true;
                         break;
                 }
             }
@@ -654,33 +782,43 @@ namespace WeilandR_HW7_3
                 {
                     case 2:
                         player.Location = 1;
+                        playerMoved = true;
                         break;
                     case 9:
                         player.Location = 2;
+                        playerMoved = true;
                         break;
                     case 14:
                         player.Location = 12;
+                        playerMoved = true;
                         break;
                     case 19:
                         player.Location = 21;
+                        playerMoved = true;
                         break;
                     case 30:
                         player.Location = 25;
+                        playerMoved = true;
                         break;
                     case 36:
                         player.Location = 35;
+                        playerMoved = true;
                         break;
                     case 39:
                         player.Location = 37;
+                        playerMoved = true;
                         break;
                     case 34:
                         player.Location = 33;
+                        playerMoved = true;
                         break;
                     case 47:
                         player.Location = 48;
+                        playerMoved = true;
                         break;
                     case 49:
                         player.Location = 50;
+                        playerMoved = true;
                         break;
 
                 }
@@ -692,26 +830,31 @@ namespace WeilandR_HW7_3
                 {
                     case 26:
                         player.Location = 25;
+                        playerMoved = true;
                         break;
                     case 35:
                         player.Location = 33;
+                        playerMoved = true;
                         break;
                     case 36:
                         player.Location = 34;
+                        playerMoved = true;
                         break;
                     case 40:
                         player.Location = 38;
+                        playerMoved = true;
                         break;
                     case 47:
                         player.Location = 49;
+                        playerMoved = true;
                         break;
                     case 48:
                         player.Location = 50;
+                        playerMoved = true;
                         break;
                 }
             }
-
-            Look();
+            return playerMoved;
         }
     }
 }

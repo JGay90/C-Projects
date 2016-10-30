@@ -14,97 +14,96 @@ namespace WeilandR_HW7_3
     public partial class dungeonCrawlForm : Form
     {
         Command com = new Command();
-        int i;
 
         public dungeonCrawlForm()
         {
             InitializeComponent();
-            roomNameLabel.Text = com.world.worldList[i].rName;
+            roomNameLabel.Text = com.world.worldList[0].rName;
             mobPopulation();
             itemPopulation();
         }
 
-        private void attackMobButton_Click(object sender, EventArgs e)
-        {
-            Creature placeHolder = null;
-            int damage = 0;
-            if (mobListBox.SelectedIndex != -1)
-            {
-                foreach (Creature val in com.world.worldList[i].mobList)//for each creature in the list, check to see if the selected name matches the creature's.
-                {
-                    if (val.Name == mobListBox.SelectedItem.ToString())
-                    {
-                        placeHolder = val;
-                    }
-                    else
-                    {
-                        displayTextBox.AppendText("\nPlease select a monster to attack");
-                    }
-                }
+        //private void attackMobButton_Click(object sender, EventArgs e)
+        //{
+        //    Creature placeHolder = null;
+        //    int damage = 0;
+        //    if (mobListBox.SelectedIndex != -1)
+        //    {
+        //        foreach (Creature val in com.world.worldList[i].mobList)//for each creature in the list, check to see if the selected name matches the creature's.
+        //        {
+        //            if (val.Name == mobListBox.SelectedItem.ToString())
+        //            {
+        //                placeHolder = val;
+        //            }
+        //            else
+        //            {
+        //                displayTextBox.AppendText("\nPlease select a monster to attack");
+        //            }
+        //        }
 
-                if (placeHolder != null)//If the placeholder has a creature, do this.
-                {
-                    damage = com.player.weaponAttack();
-                    placeHolder.HP = placeHolder.HP - damage;
-                    displayTextBox.AppendText("\nYou deal " + damage + " damage to the " + placeHolder.Name);
-                    enemyHPLabel.Text = com.world.worldList[i].mobList[mobListBox.SelectedIndex].HP.ToString();
-                    if (placeHolder.HP <= 0)
-                    {
+        //        if (placeHolder != null)//If the placeholder has a creature, do this.
+        //        {
+        //            damage = com.player.weaponAttack();
+        //            placeHolder.HP = placeHolder.HP - damage;
+        //            displayTextBox.AppendText("\nYou deal " + damage + " damage to the " + placeHolder.Name);
+        //            enemyHPLabel.Text = com.world.worldList[i].mobList[mobListBox.SelectedIndex].HP.ToString();
+        //            if (placeHolder.HP <= 0)
+        //            {
 
-                        mobListBox.Items.Remove(mobListBox.SelectedItem);
-                        placeHolder.giveXP(com.player);
-                        com.player.levelUp();
-                        com.world.worldList[i].checkDeaths();
-                        displayTextBox.AppendText("\nYou have slain the " + placeHolder.Name);
-                    }
-                    else
-                    {
-                        damage = placeHolder.rollDamage();
-                        com.player.HP = com.player.HP - damage;
-                        displayTextBox.AppendText("\nThe " + placeHolder.Name + " deals " + damage + " damage to you.");
-                    }
-                }
-                else
-                {
-                    displayTextBox.AppendText("Please select a monster to attack");
-                }
+        //                mobListBox.Items.Remove(mobListBox.SelectedItem);
+        //                placeHolder.giveXP(com.player);
+        //                com.player.levelUp();
+        //                com.world.worldList[i].checkDeaths();
+        //                displayTextBox.AppendText("\nYou have slain the " + placeHolder.Name);
+        //            }
+        //            else
+        //            {
+        //                damage = placeHolder.rollDamage();
+        //                com.player.HP = com.player.HP - damage;
+        //                displayTextBox.AppendText("\nThe " + placeHolder.Name + " deals " + damage + " damage to you.");
+        //            }
+        //        }
+        //        else
+        //        {
+        //            displayTextBox.AppendText("Please select a monster to attack");
+        //        }
                 
-                    if(com.player.checkIfDead() == true)
-                    {
-                        MessageBox.Show("You died. Game over.");
-                        Application.Exit();
-                    }
+        //            if(com.player.checkIfDead() == true)
+        //            {
+        //                MessageBox.Show("You died. Game over.");
+        //                Application.Exit();
+        //            }
                    
 
                     
-            }
-            else
-            {
-                displayTextBox.AppendText("\nAttack what?");
-            }
-            displayTextBox.ScrollToCaret();
-        }
+        //    }
+        //    else
+        //    {
+        //        displayTextBox.AppendText("\nAttack what?");
+        //    }
+        //    displayTextBox.ScrollToCaret();
+        //}
 
-        private void backButton_Click(object sender, EventArgs e)
-        {
-            if (i == 0)
-            {
-                MessageBox.Show("You are at the beginning of the " +
-                    "dungeon. You can go no further.");
-            }
-            else
-            {
-                i--;
-                roomNameLabel.Text = com.world.worldList[i].rName;
-                mobPopulation();
-                itemPopulation();
-                com.player.Location--;
-            }
-        }
+        //private void backButton_Click(object sender, EventArgs e)
+        //{
+        //    if (i == 0)
+        //    {
+        //        MessageBox.Show("You are at the beginning of the " +
+        //            "dungeon. You can go no further.");
+        //    }
+        //    else
+        //    {
+        //        i--;
+        //        roomNameLabel.Text = com.world.worldList[i].rName;
+        //        mobPopulation();
+        //        itemPopulation();
+        //        com.player.Location--;
+        //    }
+        //}
         private void mobPopulation()
         {
             mobListBox.Items.Clear();
-            foreach (Creature val in com.world.worldList[i].mobList)
+            foreach (Creature val in com.world.worldList[com.player.Location].mobList)
             {
                 mobListBox.Items.Add(val.Name);
             }
@@ -113,7 +112,7 @@ namespace WeilandR_HW7_3
         {
             roomItemListBox.Items.Clear();
             playerItemListBox.Items.Clear();
-            foreach (Item val in com.world.worldList[i].itemList)
+            foreach (Item val in com.world.worldList[com.player.Location].itemList)
             {
                 roomItemListBox.Items.Add(val.Name);
             }
@@ -123,31 +122,31 @@ namespace WeilandR_HW7_3
             }
         }
 
-        private void useRoomItemButton_Click(object sender, EventArgs e)
-        {
+        //private void useRoomItemButton_Click(object sender, EventArgs e)
+        //{
 
-            Item placeHolder = null;
-            string name = roomItemListBox.SelectedItem.ToString();
+        //    Item placeHolder = null;
+        //    string name = roomItemListBox.SelectedItem.ToString();
 
-            if (roomItemListBox.SelectedIndex != -1)
-            {
-                foreach (Item val in com.world.worldList[i].itemList)
-                {
-                    if (val.Name == name)
-                    {
-                        placeHolder = val;
-                        placeHolder.durability--;
-                        roomItemListBox.Items.Remove(roomItemListBox.SelectedItem);
-                    }
-                }
-                displayTextBox.AppendText(placeHolder.UseEffect(com.player));
-                com.world.worldList[i].itemList.Remove(placeHolder);
-            }
-            else
-            {
-                displayTextBox.AppendText("\nWhat item are you using?");
-            }
-        }
+        //    if (roomItemListBox.SelectedIndex != -1)
+        //    {
+        //        foreach (Item val in com.world.worldList[i].itemList)
+        //        {
+        //            if (val.Name == name)
+        //            {
+        //                placeHolder = val;
+        //                placeHolder.durability--;
+        //                roomItemListBox.Items.Remove(roomItemListBox.SelectedItem);
+        //            }
+        //        }
+        //        displayTextBox.AppendText(placeHolder.UseEffect(com.player));
+        //        com.world.worldList[i].itemList.Remove(placeHolder);
+        //    }
+        //    else
+        //    {
+        //        displayTextBox.AppendText("\nWhat item are you using?");
+        //    }
+        //}
 
         private void usePlayerItemButton_Click(object sender, EventArgs e)
         {
@@ -182,6 +181,7 @@ namespace WeilandR_HW7_3
             playerExpLabel.Text = com.player.EXP.ToString();
             playerWeaponLabel.Text = com.player.Weapon.Name;
             playerArmorLabel.Text = com.player.Armor.Name;
+            roomNameLabel.Text = com.world.worldList[com.player.Location].rName;
             mobPopulation();
             itemPopulation();
         }

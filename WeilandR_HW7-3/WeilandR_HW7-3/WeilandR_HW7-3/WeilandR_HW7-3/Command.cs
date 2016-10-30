@@ -26,50 +26,63 @@ namespace WeilandR_HW7_3
             //Split the line at delimiters, removing the empty entries.
              placeholder = cleanupInput.Split(delim, StringSplitOptions.RemoveEmptyEntries);//split the string into the string array by the delimiter, remove empty entries
 
-            if (placeholder.Length == 2)
-            {
+            //Take the verb and the 'action' and set them into separate roles. I could do it with just the array, but this will be easier on the eyes.
+            verb = placeholder[0];
 
-                verb = placeholder[0];
+            if (placeholder.Length == 1)
+            {
+                Console.WriteLine(verb);
+
+                switch (verb)
+                {
+                    case "look":
+                        post = Look();
+                        break;
+
+                    case "i":
+                        post = Inventory();
+                        break;
+
+                    case "inventory":
+                        post = Inventory();
+                        break;
+
+                    case "score":
+                        post = Score();
+                        break;
+
+                    case "quit":
+                        post = Quit();
+                        break;
+                }
+            }
+            else if (placeholder.Length == 2)
+            {
                 action = placeholder[1];
                 Console.WriteLine(verb);
                 Console.WriteLine(action);
 
-                switch (input)
+                switch (verb)
                 {
-                    case "Go":
+                    case "go":
                         post = Go(action);
+                        Console.WriteLine("I work!");
                         break;
 
-                    case "Look":
-                        post = Look();
-                        break;
-
-                    case "Take":
+                    case "take":
                         post = Take(action);
                         break;
 
-                    case "Get":
+                    case "get":
                         post = Get(action);
                         break;
 
-                    case "Drop":
+                    case "drop":
                         //post = Drop(action);
                         break;
 
-                    case "Open":
+                    case "open":
                        // post = Open(action);
-                        break;
-
-                    case "Inventory":
-                        post = Inventory();
-                        break;
-
-                    case "Score":
-                        post = Score();
-                        break;
-
-                    case "Quit":
-                        post = Quit();
                         break;
                 }
             }
@@ -99,13 +112,26 @@ namespace WeilandR_HW7_3
                     else
                     {
                         player.Location++;
-                        Look();
+                         go = Look();
                     }
                 }
                 else if (direction == "back")
                 {
-                    player.Location--;
-                    Look();
+                    if (this.world.worldList[player.Location].RID == 1)
+                    {
+                        MessageBox.Show("You are at the beginning of the " +
+                            "dungeon. You can go no further.");
+                    }
+                    else
+                    {
+                        player.Location--;
+                        go = Look();
+                    }
+                    
+                }
+                else
+                {
+                    go = "\nThat is not a valid direction.";
                 }
 
             }
@@ -120,8 +146,36 @@ namespace WeilandR_HW7_3
         public string Look()
         {
             string look = "";
-            
 
+            look = "\n" + world.worldList[player.Location].rName +
+                "\n" + world.worldList[player.Location].rDesc + 
+                "\n";
+
+            foreach(Creature val in world.worldList[player.Location].mobList)
+            {
+                look += "\nThere is a " + val.Name + " here.";
+            }
+
+            foreach(Item val in world.worldList[player.Location].itemList)
+            {
+                look += "\nThere is a " + val.Name + " here.";
+            }
+
+            look += "\nThere are ";
+
+            if(world.worldList[player.Location].exitList.Count != 0)
+            {
+                foreach(string val in world.worldList[player.Location].exitList)
+                {
+                    look += val;
+                }
+            }
+            else
+            {
+                look += " no";
+            }
+
+            look += " exits here.";
 
             return look;
         }

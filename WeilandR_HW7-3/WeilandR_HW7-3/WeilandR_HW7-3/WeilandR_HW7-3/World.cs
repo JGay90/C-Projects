@@ -14,6 +14,7 @@ namespace WeilandR_HW7_3
         public World()
         {
             //this is the base room in our world.
+            Room room0 = new Room();
             Room room1 = new Room();
             Room room2 = new Room();
             Room room3 = new Room();
@@ -50,6 +51,9 @@ namespace WeilandR_HW7_3
             Treasure gold = new Treasure();
             string[] placeHolder;
 
+
+            //Room 0 stuff. This is the bug room, where people should be sent if something wrong happens. The player should never normally see this.
+            worldList.Add(room0);
 
             //Room 1 stuff
             room1.RID = 1;

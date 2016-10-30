@@ -36,6 +36,7 @@ namespace WeilandR_HW7_3
             Armor.Name = "Tattered Shirt";
             DMG = ATK + Weapon.attackValue;
             AC = Armor.armorValue;
+            Location = 1;
         }
 
         public int weaponAttack()

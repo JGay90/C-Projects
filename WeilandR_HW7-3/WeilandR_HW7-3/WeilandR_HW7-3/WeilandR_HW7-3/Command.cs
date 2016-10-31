@@ -607,10 +607,6 @@ namespace WeilandR_HW7_3
                         player.Location = 51;
                         playerMoved = true;
                         break;
-                    case 53:
-                        player.Location = 54;
-                        playerMoved = true;
-                        break;
                 }
             }
             else if (dir == "south")

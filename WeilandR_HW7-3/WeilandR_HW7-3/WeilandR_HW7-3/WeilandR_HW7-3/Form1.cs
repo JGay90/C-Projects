@@ -185,5 +185,10 @@ namespace WeilandR_HW7_3
             displayTextBox.AppendText(com.Handler(input));
             displayTextBox.ScrollToCaret();
         }
+        
+        private void attackCombatButton_Click(object sender, EventArgs e)
+        {
+ 
+        }
     }
 }

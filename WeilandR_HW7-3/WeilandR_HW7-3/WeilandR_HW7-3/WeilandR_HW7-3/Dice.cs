@@ -17,6 +17,12 @@ namespace WeilandR_HW7_3
             Singleton single = Singleton.Instance;
             _rand = single.Rand;
         }
+
+        public int rollDice(int size)
+        {
+            Result = _rand.Next(size + 1);
+            return Result;
+        }
        
         public int rollDice(Creature thing)
         {

@@ -1,0 +1,30 @@
+Goblin
+A short bugeyed creature with sharp teeth. Looks Ready to Attack
+5
+3
+4
+4
+Wolf
+A four-legged snarling creature. Looking Ready to Attack
+7
+3
+5
+3
+Skeleton
+A collection of bones humming with arcane energy. Looking Ready to Attack
+6
+2
+3
+2
+Mage
+An elderly human wearing red robes holding a magical wooden staff. Looks at you wearily.
+10
+4
+8
+4
+Dragon
+A giant scaled creature guarding its hoard with fire. Looking Ready to Attack
+50
+10
+25
+7

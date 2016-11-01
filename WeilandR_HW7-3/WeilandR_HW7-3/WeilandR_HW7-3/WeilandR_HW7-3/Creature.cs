@@ -10,6 +10,7 @@ namespace WeilandR_HW7_3
     public class Creature
     {
         public string Name { get; set; }
+        public List<string> accessName;
         public string Desc { get; set; }
         public int HP { get; set; }
         public int AC { get; set; }
@@ -17,6 +18,8 @@ namespace WeilandR_HW7_3
         public int DMG { get; set; }
         public int Lvl { get; set; }
         public int Exp { get; set; }
+        public bool isdead { get; set; }
+        public List<Item> mobInventory;
         //public Image i { get; set; }
 
         /**
@@ -30,15 +33,34 @@ namespace WeilandR_HW7_3
 
         public Creature()
         {
-            Name = "You didn't populate the bestiary";
-            Desc = "You should go do that now.";
-            HP = 0;
+            mobInventory = new List<Item>();
+            accessName = new List<string>();
+            Name = "Tom";
+            Desc = "Tom is upset. Tome notices that you're using the default constructor rather than actually giving a proper description to him. You should go do that now.";
+            HP = 10;
             AC = 0;
             ATK = 0;
             Lvl = 1;
             DMG = ATK+Lvl;
             Exp = 10;
+            isdead = false;
             //i = Image.FromFile("Bestiary.png");
+        }
+
+        public int rollDamage()
+        {
+            int result = 0;
+
+            RandomDice rand = new RandomDice();
+
+            result = rand.rollDice(3) + DMG;
+
+            return result;
+        }
+
+        public void giveXP(Player player)
+        {
+            player.EXP = player.EXP + Exp;
         }
     }
 }

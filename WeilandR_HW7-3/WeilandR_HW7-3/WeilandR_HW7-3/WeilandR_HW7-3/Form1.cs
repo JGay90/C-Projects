@@ -22,6 +22,7 @@ namespace WeilandR_HW7_3
             mobPopulation();
             itemPopulation();
             Instructions();
+            displayTextBox.AppendText(com.Handler("look"));
         }
 
         //private void attackMobButton_Click(object sender, EventArgs e)
@@ -88,7 +89,7 @@ namespace WeilandR_HW7_3
         private void Instructions()
         {
             displayTextBox.AppendText("Instructions:");
-            displayTextBox.AppendText("\n'Go Ahead' or 'Go Back' to move ahead or back.");
+            displayTextBox.AppendText("\n'GO <direction> To move in any direction listed!.");
             com.Look();
 
         }
@@ -140,30 +141,6 @@ namespace WeilandR_HW7_3
         //        displayTextBox.AppendText("\nWhat item are you using?");
         //    }
         //}
-
-        private void usePlayerItemButton_Click(object sender, EventArgs e)
-        {
-            Item placeHolder = null;
-            string name = playerItemListBox.SelectedItem.ToString();
-            if (playerItemListBox.SelectedIndex != -1)
-            {
-                foreach (Item val in com.player.Inventory)
-                {
-                    if (val.Name == name)
-                    {
-                        placeHolder = val;
-                        placeHolder.durability--;
-                        playerItemListBox.Items.Remove(playerItemListBox.SelectedItem);
-                    }
-                }
-                displayTextBox.AppendText(placeHolder.UseEffect(com.player));
-                com.player.Inventory.Remove(placeHolder);
-            }
-            else
-            {
-                displayTextBox.AppendText("\nWhat item are you using in your inventory?");
-            }
-        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {

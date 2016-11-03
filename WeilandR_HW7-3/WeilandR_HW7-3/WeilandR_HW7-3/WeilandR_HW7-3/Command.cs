@@ -84,6 +84,10 @@ namespace WeilandR_HW7_3
                     case "open":
                         //post = Open(action);
                         break;
+
+                    case "use":
+                        //post = Use(action);
+                        break;
                 }
             }
             else
@@ -114,6 +118,60 @@ namespace WeilandR_HW7_3
 
 
             return go;
+        }
+
+        public string Use(string action)
+        {
+            string use;
+            Item placeholder = null;
+            bool inInv = false;
+            bool inRoom = false;
+
+            foreach(Item val in player.Inventory)
+            {
+                if(val.accessName.Equals(action))
+                {
+                    placeholder = val;
+                    inInv = true;
+                    break;
+                }
+            }
+            foreach(Item val in world.worldList[player.Location].itemList)
+            {
+                if (val.accessName.Equals(action))
+                {
+                    placeholder = val;
+                    inRoom = true;
+                    break;
+                }
+            }
+
+            if(inInv && inRoom)
+            {
+                use = "You use the " + placeholder.Name;
+                placeholder.UseEffect(player);
+                player.Inventory.Remove(placeholder);
+            }
+            else if (inInv && inRoom == false)
+            {
+                use = "You use the " + placeholder.Name;
+                placeholder.UseEffect(player);
+                player.Inventory.Remove(placeholder);
+            }
+            else if (inInv == false && inRoom)
+            {
+                use = "You use the " + placeholder.Name;
+                placeholder.UseEffect(player);
+                world.worldList[player.Location].itemList.Remove(placeholder);
+            }
+            else
+            {
+                use = "I don't see an item here!";
+            }
+
+
+
+            return use;
         }
         public string Look()
         {

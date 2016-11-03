@@ -102,8 +102,14 @@ namespace WeilandR_HW7_3
             string[] placeHolder;
 
 
-            //Room 0 stuff. This is the bug room, where people should be sent if something wrong happens. The player should never normally see this.
+            //Room 0 stuff. This is the entrance room, where people should be sent if something wrong happens. The player should never normally see this.
+            room0.RID = 0;
+            room0.rName = "Beginning";
+            room0.exitList.Add("North");
+            room0.exitList.Add("East");
+            room0.exitList.Add("West");
             worldList.Add(room0);
+
 
             //Room 1 stuff
             room1.RID = 1;
@@ -188,7 +194,7 @@ namespace WeilandR_HW7_3
             //Room 6 stuff
             room6.RID = 6;
             room6.rName = "Tallest Tower";
-            room6.exitList.Add("West");
+            room6.exitList.Add("East");
             worldList.Add(room6);
 
             //Room 7 stuff

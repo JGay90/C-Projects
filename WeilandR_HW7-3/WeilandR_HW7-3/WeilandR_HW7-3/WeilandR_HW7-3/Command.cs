@@ -133,13 +133,13 @@ namespace WeilandR_HW7_3
                 look += "\nThere is a " + val.Name + " here.";
             }
 
-            look += "\nThere are ";
+            look += "\nThere are";
 
             if(world.worldList[player.Location].exitList.Count != 0)
             {
                 foreach(string val in world.worldList[player.Location].exitList)
                 {
-                    look += val;
+                    look += " " + val;
                 }
             }
             else

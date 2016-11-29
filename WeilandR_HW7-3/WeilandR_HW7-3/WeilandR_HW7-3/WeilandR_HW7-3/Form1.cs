@@ -161,6 +161,8 @@ namespace WeilandR_HW7_3
             string input = commandTextBox.Text;
             displayTextBox.AppendText(com.Handler(input));
             displayTextBox.ScrollToCaret();
+            commandTextBox.SelectionStart = 0;
+            commandTextBox.SelectionLength = commandTextBox.Text.Length;
         }
         
         private void attackCombatButton_Click(object sender, EventArgs e)

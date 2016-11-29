@@ -9,3 +9,12 @@ C:\Users\weilandr0843\Source\Repos\Homework\M4H1_WeilandR\M4H1_WeilandR\bin\Debu
 C:\Users\weilandr0843\Source\Repos\Homework\M4H1_WeilandR\M4H1_WeilandR\bin\Debug\M4H1_WeilandR.pdb
 C:\Users\weilandr0843\Source\Repos\Homework\M4H1_WeilandR\M4H1_WeilandR\obj\Debug\M4H1_WeilandR.exe
 C:\Users\weilandr0843\Source\Repos\Homework\M4H1_WeilandR\M4H1_WeilandR\obj\Debug\M4H1_WeilandR.pdb
+C:\Users\nelsonj5726\Source\Repos\C-Projects\M4H1_WeilandR\M4H1_WeilandR\bin\Debug\M4H1_WeilandR.exe.config
+C:\Users\nelsonj5726\Source\Repos\C-Projects\M4H1_WeilandR\M4H1_WeilandR\obj\Debug\M4H1_WeilandR.exe
+C:\Users\nelsonj5726\Source\Repos\C-Projects\M4H1_WeilandR\M4H1_WeilandR\obj\Debug\M4H1_WeilandR.pdb
+C:\Users\nelsonj5726\Source\Repos\C-Projects\M4H1_WeilandR\M4H1_WeilandR\bin\Debug\M4H1_WeilandR.exe
+C:\Users\nelsonj5726\Source\Repos\C-Projects\M4H1_WeilandR\M4H1_WeilandR\bin\Debug\M4H1_WeilandR.pdb
+C:\Users\nelsonj5726\Source\Repos\C-Projects\M4H1_WeilandR\M4H1_WeilandR\obj\Debug\M4H1_WeilandR.csprojResolveAssemblyReference.cache
+C:\Users\nelsonj5726\Source\Repos\C-Projects\M4H1_WeilandR\M4H1_WeilandR\obj\Debug\M4H1_WeilandR.Form1.resources
+C:\Users\nelsonj5726\Source\Repos\C-Projects\M4H1_WeilandR\M4H1_WeilandR\obj\Debug\M4H1_WeilandR.Properties.Resources.resources
+C:\Users\nelsonj5726\Source\Repos\C-Projects\M4H1_WeilandR\M4H1_WeilandR\obj\Debug\M4H1_WeilandR.csproj.GenerateResource.Cache

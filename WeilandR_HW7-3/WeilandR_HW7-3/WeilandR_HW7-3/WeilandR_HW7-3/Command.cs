@@ -18,7 +18,7 @@ namespace WeilandR_HW7_3
             string cleanupInput;//this will be the placeholder for cleaning up the input and just taking the input in general.
             string verb;//This will be the placeholder to determine the verb.
             string action;//This will be the placeholder to determine the action.
-            string post = "Try again?";//This will be for holding the output.
+            string post = "\nTry again?";//This will be for holding the output.
             char[] delim = { ' ', ',', '.', '!', '?' };//this is here to be a delimiter for when I separate words.
 
             cleanupInput = input.Trim().ToLower();//trim the white space off the input
@@ -92,7 +92,7 @@ namespace WeilandR_HW7_3
             }
             else
             {
-                post = "Invalid command. Try again?";
+                post = "\nInvalid command. Try again?";
             }
 
 
@@ -108,12 +108,12 @@ namespace WeilandR_HW7_3
 
             if (playerMoved == true)
             {
-                go = "You move to the " + direction + ".";
+                go = "\nYou move to the " + direction + ".";
                 Look();
             }
             else
             {
-                go = "You can't move to the " + direction + ".";
+                go = "\nYou can't move to the " + direction + ".";
             }
 
 
@@ -148,25 +148,25 @@ namespace WeilandR_HW7_3
 
             if(inInv && inRoom)
             {
-                use = "You use the " + placeholder.Name;
+                use = "\nYou use the " + placeholder.Name;
                 placeholder.UseEffect(player);
                 player.Inventory.Remove(placeholder);
             }
             else if (inInv && inRoom == false)
             {
-                use = "You use the " + placeholder.Name;
+                use = "\nYou use the " + placeholder.Name;
                 placeholder.UseEffect(player);
                 player.Inventory.Remove(placeholder);
             }
             else if (inInv == false && inRoom)
             {
-                use = "You use the " + placeholder.Name;
+                use = "\nYou use the " + placeholder.Name;
                 placeholder.UseEffect(player);
                 world.worldList[player.Location].itemList.Remove(placeholder);
             }
             else
             {
-                use = "I don't see an item here!";
+                use = "\nI don't see an item here!";
             }
 
 
@@ -323,7 +323,7 @@ namespace WeilandR_HW7_3
         public string Quit()
         {
             string quit = "Game Over\n" +
-                          "Your score was: " + Score() + "\n" +
+                          "\nYour score was: " + Score() + "\n" +
                           "Have a Nice Day";
             return quit;
         }
